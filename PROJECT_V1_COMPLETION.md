@@ -24,7 +24,7 @@ remain dated 2026-09-27.
 | C03 error demo | PASS | Changed workload: one timeout, three HTTP 500, one HTTP 200; restored 5/5 HTTP 200 |
 | R04 semantic replay | PASS | Currency conversion outputs differ; restoration and gate pass |
 | Source-build Quick Start | PASS | Clean no-cache rebuild of all eight platform images plus the replay image, loaded into kind and deployed; baseline gate and C01 rerun passed on the fresh images (`data/validation/kind-final-gate.json`; `.runtime-nocache-rebuild.log`) |
-| CI lint/test/config/build | Local checks PASS; hosted CI unrun | Seven tests, Ruff, Kustomize render, Compose/Collector validation, API image build |
+| CI lint/test/config/build | Local checks PASS; hosted CI PASS (2026-10-10) | Seven tests, Ruff, Kustomize render, Compose/Collector validation, API image build |
 | No invented performance results | PASS | No RCA/MTTR/SLO/performance improvement claims |
 
 The first kind gate captured 9 services and 50/71 pairs while currency's exporter
@@ -86,7 +86,7 @@ Known limitations:
 
 V2 priorities:
 - Reproduce the clean build on a fresh machine/runner and run all 23 scenarios end to end.
-- Add economical PR kind smoke; publish selected trace/dashboard evidence; run hosted CI after publication.
+- Add economical PR kind smoke; expand selected trace/dashboard evidence and hosted end-to-end coverage.
 - Pin all transitive dependencies and images by digest; improve startup telemetry readiness (including a settle before restored gates).
 - Add persistent trace/metric storage and authentication if exposing the platform beyond localhost.
 
@@ -99,4 +99,9 @@ V2 priorities:
   configuration validation passed (10 apps, 23 cases, 3 dashboards);
   Kustomize rendering and Docker Compose configuration passed.
 - Source manifest hashes verified; no credentials found by the release scan.
-- Hosted publication and CI results will be recorded after GitHub verification.
+- Public repository created; anonymous GitHub page access verified: HTTP 200.
+- First hosted CI run: [PASS](https://github.com/NJNAN/microservice-observability-platform/actions/runs/38055023817), source commit `153ce29`.
+  Linux/Python 3.13 Ruff, 7 regression tests, generated configuration validation,
+  Kustomize render, Compose validation, and platform Docker image build passed.
+- The manual kind smoke/full-suite jobs were not executed during publication;
+  cluster evidence above remains the dated local acceptance evidence.

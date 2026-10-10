@@ -41,7 +41,7 @@
 | gRPC 配对 | **71/71**，无断链 | 业务 client/server span |
 | 请求验收 | **5/5** | kind 基线及 C01 原始 / 变更 / 恢复阶段，每阶段分别验收 |
 
-以上是已有干净源码构建后的本地验收记录；本次 README 更新未重跑集群实验。23 个案例具有历史证据，新的 Kubernetes 端到端执行覆盖单独记录。**RCA 准确率、MTTR、延迟提升与 SLO 达成率尚未测量。**
+以上结果来自 2026-09-27 干净源码构建后的本地验收；2026-10-10 的公开发布另行通过 GitHub CI 验证。23 个案例具有历史证据，新的 Kubernetes 端到端执行覆盖单独记录。**RCA 准确率、MTTR、延迟提升与 SLO 达成率尚未测量。**
 
 → [kind 验收原始记录](data/validation/kind-final-gate.json) · [完整验收报告](PROJECT_V1_COMPLETION.md) · [审计与边界](PROJECT_V1_AUDIT.md)
 
@@ -69,6 +69,8 @@ development machine; the cart image build targets linux-x64. Allow sufficient
 Docker memory for the application, observability stack and image builds.
 
 ```bash
+git clone https://github.com/NJNAN/microservice-observability-platform.git
+cd microservice-observability-platform
 python -m venv .venv
 source .venv/bin/activate
 make setup
@@ -79,6 +81,8 @@ make status
 Windows PowerShell uses the same Python orchestration:
 
 ```powershell
+git clone https://github.com/NJNAN/microservice-observability-platform.git
+cd microservice-observability-platform
 python -m venv .venv
 .venv\Scripts\Activate.ps1
 python scripts/manage.py setup
@@ -234,8 +238,9 @@ Compose remains a development/tracing-debug fallback: build images with
 It has no Kubernetes mutation execution. The original research Compose is unchanged.
 
 CI runs lint, unit tests, configuration validation and the platform image build.
-Manual workflow dispatch adds kind smoke or the full mutation suite. GitHub Actions
-execution is not claimed until this directory is published and a workflow runs.
+The first hosted run [passed on 2026-10-10](https://github.com/NJNAN/microservice-observability-platform/actions/runs/38055023817).
+Manual workflow dispatch adds kind smoke or the full mutation suite; those jobs
+were not run during publication. The badge above shows the current CI status.
 
 For a curated public source tree, run
 `python scripts/export_release.py dist/microservice-observability-platform`.
