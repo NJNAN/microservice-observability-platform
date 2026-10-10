@@ -1,0 +1,4 @@
+services:
+  productcatalogservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/commits/method_replays/R01_catalog_refresh_d2c729/products_changed.json:/src/products.json:ro

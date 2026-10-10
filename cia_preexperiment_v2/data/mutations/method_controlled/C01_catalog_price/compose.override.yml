@@ -1,0 +1,4 @@
+services:
+  productcatalogservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/C01_catalog_price/products.json:/src/products.json:ro

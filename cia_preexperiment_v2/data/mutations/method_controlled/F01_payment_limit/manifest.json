@@ -1,0 +1,12 @@
+{
+  "case_id": "F01_payment_limit",
+  "cohort": "controlled",
+  "change_type": "Failure/Fallback",
+  "changed_service": "paymentservice",
+  "changed_file": "src/paymentservice/charge.js",
+  "description": "Reject charges of at least 19 currency units",
+  "expected_mechanism": "Checkout payment failure and Charge error",
+  "original_sha256": "c6b075b07c784844d7c95a7f29a2055aeb6266eac05643ebe8432a4387258bf4",
+  "changed_sha256": "3447369fd7d1f908fe088da605e0b46da5f2a5fbd16f0858381b1b337490c450",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\F01_payment_limit\\compose.override.yml"
+}

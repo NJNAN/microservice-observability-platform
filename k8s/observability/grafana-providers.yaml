@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-providers
+data:
+  dashboards.yaml: "apiVersion: 1\nproviders:\n- name: MOP\n  type: file\n  options:\n\
+    \    path: /var/lib/grafana/dashboards\n"

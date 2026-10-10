@@ -1,0 +1,65 @@
+{
+  "kind": "system_execution_gate_fixed_workload",
+  "timestamp_utc": "2026-09-26T16:59:55.531068+00:00",
+  "base_url": "http://127.0.0.1:18080",
+  "seed": 42,
+  "repeats": 1,
+  "interval_s": 0.2,
+  "rows": [
+    {
+      "run_id": 1,
+      "step": "home",
+      "method": "GET",
+      "path": "/",
+      "status": 200,
+      "latency_ms": 89.555,
+      "body_sha256": "bdd3f78de231c37e9a02a9e3a0fef028f9f11b428c952b15fc3395e86d48618e",
+      "body_bytes": 10487,
+      "error": null
+    },
+    {
+      "run_id": 1,
+      "step": "product",
+      "method": "GET",
+      "path": "/product/OLJCESPC7Z",
+      "status": 200,
+      "latency_ms": 19.858,
+      "body_sha256": "83f16ffc878f97583c42f197ced50105ab0f988eb2a41a76cb3436f0d4a0d7f9",
+      "body_bytes": 7984,
+      "error": null
+    },
+    {
+      "run_id": 1,
+      "step": "add_cart",
+      "method": "POST",
+      "path": "/cart",
+      "status": 200,
+      "latency_ms": 16.303,
+      "body_sha256": "493ea5d2bd021df94aa72837dcb9c1f92194e2531e73583d03cc415c266783a5",
+      "body_bytes": 16438,
+      "error": null
+    },
+    {
+      "run_id": 1,
+      "step": "view_cart",
+      "method": "GET",
+      "path": "/cart",
+      "status": 200,
+      "latency_ms": 15.872,
+      "body_sha256": "24605aa3a53b12fb796f2745fb727177ce949d3e5c7a7d2ccff2c9bb3fb10766",
+      "body_bytes": 16418,
+      "error": null
+    },
+    {
+      "run_id": 1,
+      "step": "checkout",
+      "method": "POST",
+      "path": "/cart/checkout",
+      "status": 200,
+      "latency_ms": 34.066,
+      "body_sha256": "e415aa6260d62a0a5ece61e7ae8a2ac2e65894559dd2242496a5bc7bbd14493d",
+      "body_bytes": 6827,
+      "error": null
+    }
+  ]
+}

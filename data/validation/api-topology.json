@@ -1,0 +1,250 @@
+{
+  "nodes": [
+    {
+      "id": "adservice"
+    },
+    {
+      "id": "cartservice"
+    },
+    {
+      "id": "checkoutservice"
+    },
+    {
+      "id": "currencyservice"
+    },
+    {
+      "id": "emailservice"
+    },
+    {
+      "id": "frontend"
+    },
+    {
+      "id": "paymentservice"
+    },
+    {
+      "id": "productcatalogservice"
+    },
+    {
+      "id": "recommendationservice"
+    },
+    {
+      "id": "shippingservice"
+    }
+  ],
+  "edges": [
+    {
+      "source": "checkoutservice",
+      "target": "cartservice",
+      "call_count": 2,
+      "trace_count": 1,
+      "calls": 2
+    },
+    {
+      "source": "checkoutservice",
+      "target": "currencyservice",
+      "call_count": 2,
+      "trace_count": 1,
+      "calls": 2
+    },
+    {
+      "source": "checkoutservice",
+      "target": "emailservice",
+      "call_count": 1,
+      "trace_count": 1,
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "paymentservice",
+      "call_count": 1,
+      "trace_count": 1,
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "productcatalogservice",
+      "call_count": 1,
+      "trace_count": 1,
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "shippingservice",
+      "call_count": 2,
+      "trace_count": 1,
+      "calls": 2
+    },
+    {
+      "source": "frontend",
+      "target": "adservice",
+      "call_count": 2,
+      "trace_count": 2,
+      "calls": 2
+    },
+    {
+      "source": "frontend",
+      "target": "cartservice",
+      "call_count": 5,
+      "trace_count": 5,
+      "calls": 5
+    },
+    {
+      "source": "frontend",
+      "target": "checkoutservice",
+      "call_count": 1,
+      "trace_count": 1,
+      "calls": 1
+    },
+    {
+      "source": "frontend",
+      "target": "currencyservice",
+      "call_count": 19,
+      "trace_count": 5,
+      "calls": 19
+    },
+    {
+      "source": "frontend",
+      "target": "productcatalogservice",
+      "call_count": 25,
+      "trace_count": 6,
+      "calls": 25
+    },
+    {
+      "source": "frontend",
+      "target": "recommendationservice",
+      "call_count": 4,
+      "trace_count": 4,
+      "calls": 4
+    },
+    {
+      "source": "frontend",
+      "target": "shippingservice",
+      "call_count": 2,
+      "trace_count": 2,
+      "calls": 2
+    },
+    {
+      "source": "recommendationservice",
+      "target": "productcatalogservice",
+      "call_count": 4,
+      "trace_count": 4,
+      "calls": 4
+    }
+  ],
+  "rpc_calls": [
+    {
+      "source": "checkoutservice",
+      "target": "cartservice",
+      "operation": "hipstershop.CartService/EmptyCart",
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "cartservice",
+      "operation": "hipstershop.CartService/GetCart",
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "currencyservice",
+      "operation": "grpc.hipstershop.CurrencyService/Convert",
+      "calls": 2
+    },
+    {
+      "source": "checkoutservice",
+      "target": "emailservice",
+      "operation": "/hipstershop.EmailService/SendOrderConfirmation",
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "paymentservice",
+      "operation": "grpc.hipstershop.PaymentService/Charge",
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "productcatalogservice",
+      "operation": "hipstershop.ProductCatalogService/GetProduct",
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "shippingservice",
+      "operation": "hipstershop.ShippingService/GetQuote",
+      "calls": 1
+    },
+    {
+      "source": "checkoutservice",
+      "target": "shippingservice",
+      "operation": "hipstershop.ShippingService/ShipOrder",
+      "calls": 1
+    },
+    {
+      "source": "frontend",
+      "target": "adservice",
+      "operation": "hipstershop.AdService/GetAds",
+      "calls": 2
+    },
+    {
+      "source": "frontend",
+      "target": "cartservice",
+      "operation": "hipstershop.CartService/AddItem",
+      "calls": 1
+    },
+    {
+      "source": "frontend",
+      "target": "cartservice",
+      "operation": "hipstershop.CartService/GetCart",
+      "calls": 4
+    },
+    {
+      "source": "frontend",
+      "target": "checkoutservice",
+      "operation": "hipstershop.CheckoutService/PlaceOrder",
+      "calls": 1
+    },
+    {
+      "source": "frontend",
+      "target": "currencyservice",
+      "operation": "grpc.hipstershop.CurrencyService/Convert",
+      "calls": 14
+    },
+    {
+      "source": "frontend",
+      "target": "currencyservice",
+      "operation": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+      "calls": 5
+    },
+    {
+      "source": "frontend",
+      "target": "productcatalogservice",
+      "operation": "hipstershop.ProductCatalogService/GetProduct",
+      "calls": 24
+    },
+    {
+      "source": "frontend",
+      "target": "productcatalogservice",
+      "operation": "hipstershop.ProductCatalogService/ListProducts",
+      "calls": 1
+    },
+    {
+      "source": "frontend",
+      "target": "recommendationservice",
+      "operation": "/hipstershop.RecommendationService/ListRecommendations",
+      "calls": 4
+    },
+    {
+      "source": "frontend",
+      "target": "shippingservice",
+      "operation": "hipstershop.ShippingService/GetQuote",
+      "calls": 2
+    },
+    {
+      "source": "recommendationservice",
+      "target": "productcatalogservice",
+      "operation": "hipstershop.ProductCatalogService/ListProducts",
+      "calls": 4
+    }
+  ]
+}

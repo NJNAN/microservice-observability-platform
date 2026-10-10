@@ -1,0 +1,415 @@
+case_id,cohort,change_type,repeat,coverage_level,granularity,static_fp,static_fn,runtime_fp,runtime_fn,static_fp_corrected,runtime_fn_recovered,hybrid_induced_fp,hybrid_induced_fn,hybrid_added_fp_vs_B2,hybrid_added_fn_vs_B2,hybrid_added_fp_vs_B4,hybrid_added_fn_vs_B4,hybrid_fp,hybrid_fn,static_runtime_error_overlap
+L01_spread_05,controlled,Logic,1,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,1,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,1,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+L01_spread_05,controlled,Logic,1,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L01_spread_05,controlled,Logic,1,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,2,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,2,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,2,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+L01_spread_05,controlled,Logic,2,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L01_spread_05,controlled,Logic,2,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,3,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,3,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,3,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+L01_spread_05,controlled,Logic,3,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L01_spread_05,controlled,Logic,3,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L01_spread_05,controlled,Logic,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,1,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,1,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,1,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+L02_whole_units,controlled,Logic,1,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L02_whole_units,controlled,Logic,1,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,2,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,2,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,2,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+L02_whole_units,controlled,Logic,2,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L02_whole_units,controlled,Logic,2,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,3,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,3,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,3,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+L02_whole_units,controlled,Logic,3,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L02_whole_units,controlled,Logic,3,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L02_whole_units,controlled,Logic,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L03_minimum_10,controlled,Logic,1,low,api,1,0,0,4,0,4,0,0,0,0,1,0,1,0,0
+L03_minimum_10,controlled,Logic,1,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L03_minimum_10,controlled,Logic,1,medium,api,1,0,1,3,0,0,0,0,0,3,1,0,1,3,1
+L03_minimum_10,controlled,Logic,1,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L03_minimum_10,controlled,Logic,1,high,api,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1
+L03_minimum_10,controlled,Logic,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L03_minimum_10,controlled,Logic,2,low,api,1,0,0,4,0,4,0,0,0,0,1,0,1,0,0
+L03_minimum_10,controlled,Logic,2,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L03_minimum_10,controlled,Logic,2,medium,api,1,0,1,3,0,0,0,0,0,3,1,0,1,3,1
+L03_minimum_10,controlled,Logic,2,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L03_minimum_10,controlled,Logic,2,high,api,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1
+L03_minimum_10,controlled,Logic,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L03_minimum_10,controlled,Logic,3,low,api,1,0,0,4,0,4,0,0,0,0,1,0,1,0,0
+L03_minimum_10,controlled,Logic,3,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+L03_minimum_10,controlled,Logic,3,medium,api,1,0,1,3,0,0,0,0,0,3,1,0,1,3,1
+L03_minimum_10,controlled,Logic,3,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+L03_minimum_10,controlled,Logic,3,high,api,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1
+L03_minimum_10,controlled,Logic,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+L04_cap_50,controlled,Logic,1,low,api,4,0,0,1,0,1,0,0,0,0,4,0,4,0,0
+L04_cap_50,controlled,Logic,1,low,service,1,0,0,1,0,1,0,0,0,0,1,0,1,0,0
+L04_cap_50,controlled,Logic,1,medium,api,4,0,1,0,3,0,0,0,0,0,1,0,1,0,1
+L04_cap_50,controlled,Logic,1,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+L04_cap_50,controlled,Logic,1,high,api,4,0,4,0,0,0,0,0,0,0,2,0,4,0,4
+L04_cap_50,controlled,Logic,1,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+L04_cap_50,controlled,Logic,2,low,api,4,0,0,1,0,1,0,0,0,0,4,0,4,0,0
+L04_cap_50,controlled,Logic,2,low,service,1,0,0,1,0,1,0,0,0,0,1,0,1,0,0
+L04_cap_50,controlled,Logic,2,medium,api,4,0,1,0,3,0,0,0,0,0,1,0,1,0,1
+L04_cap_50,controlled,Logic,2,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+L04_cap_50,controlled,Logic,2,high,api,4,0,4,0,0,0,0,0,0,0,2,0,4,0,4
+L04_cap_50,controlled,Logic,2,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+L04_cap_50,controlled,Logic,3,low,api,4,0,0,1,0,1,0,0,0,0,4,0,4,0,0
+L04_cap_50,controlled,Logic,3,low,service,1,0,0,1,0,1,0,0,0,0,1,0,1,0,0
+L04_cap_50,controlled,Logic,3,medium,api,4,0,1,0,3,0,0,0,0,0,1,0,1,0,1
+L04_cap_50,controlled,Logic,3,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+L04_cap_50,controlled,Logic,3,high,api,4,0,4,0,0,0,0,0,0,0,2,0,4,0,4
+L04_cap_50,controlled,Logic,3,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+A01_drop_jpy,controlled,API,1,low,api,3,0,0,1,0,1,0,0,0,0,3,0,3,0,0
+A01_drop_jpy,controlled,API,1,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,1,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+A01_drop_jpy,controlled,API,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,1,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+A01_drop_jpy,controlled,API,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,2,low,api,3,0,0,1,0,1,0,0,0,0,3,0,3,0,0
+A01_drop_jpy,controlled,API,2,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,2,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+A01_drop_jpy,controlled,API,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,2,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+A01_drop_jpy,controlled,API,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,3,low,api,3,0,0,1,0,1,0,0,0,0,3,0,3,0,0
+A01_drop_jpy,controlled,API,3,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,3,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+A01_drop_jpy,controlled,API,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A01_drop_jpy,controlled,API,3,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+A01_drop_jpy,controlled,API,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A02_reject_eur,controlled,API,1,low,api,5,0,0,0,0,0,0,0,0,0,5,0,5,0,0
+A02_reject_eur,controlled,API,1,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+A02_reject_eur,controlled,API,1,medium,api,5,0,2,0,3,0,0,0,0,0,1,0,2,0,2
+A02_reject_eur,controlled,API,1,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+A02_reject_eur,controlled,API,1,high,api,5,0,5,0,0,0,0,0,0,0,2,0,5,0,5
+A02_reject_eur,controlled,API,1,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+A02_reject_eur,controlled,API,2,low,api,5,0,0,0,0,0,0,0,0,0,5,0,5,0,0
+A02_reject_eur,controlled,API,2,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+A02_reject_eur,controlled,API,2,medium,api,5,0,2,0,3,0,0,0,0,0,1,0,2,0,2
+A02_reject_eur,controlled,API,2,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+A02_reject_eur,controlled,API,2,high,api,5,0,5,0,0,0,0,0,0,0,2,0,5,0,5
+A02_reject_eur,controlled,API,2,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+A02_reject_eur,controlled,API,3,low,api,5,0,0,0,0,0,0,0,0,0,5,0,5,0,0
+A02_reject_eur,controlled,API,3,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+A02_reject_eur,controlled,API,3,medium,api,5,0,2,0,3,0,0,0,0,0,1,0,2,0,2
+A02_reject_eur,controlled,API,3,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+A02_reject_eur,controlled,API,3,high,api,5,0,5,0,0,0,0,0,0,0,2,0,5,0,5
+A02_reject_eur,controlled,API,3,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+A03_accept_amex,controlled,API,1,low,api,2,0,0,0,0,0,0,0,0,0,2,0,2,0,0
+A03_accept_amex,controlled,API,1,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+A03_accept_amex,controlled,API,1,medium,api,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+A03_accept_amex,controlled,API,1,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+A03_accept_amex,controlled,API,1,high,api,2,0,2,0,0,0,0,0,0,0,2,0,2,0,2
+A03_accept_amex,controlled,API,1,high,service,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1
+A03_accept_amex,controlled,API,2,low,api,2,0,0,0,0,0,0,0,0,0,2,0,2,0,0
+A03_accept_amex,controlled,API,2,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+A03_accept_amex,controlled,API,2,medium,api,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+A03_accept_amex,controlled,API,2,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+A03_accept_amex,controlled,API,2,high,api,2,0,2,0,0,0,0,0,0,0,2,0,2,0,2
+A03_accept_amex,controlled,API,2,high,service,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1
+A03_accept_amex,controlled,API,3,low,api,2,0,0,0,0,0,0,0,0,0,2,0,2,0,0
+A03_accept_amex,controlled,API,3,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+A03_accept_amex,controlled,API,3,medium,api,2,0,0,0,2,0,0,0,0,0,0,0,0,0,0
+A03_accept_amex,controlled,API,3,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+A03_accept_amex,controlled,API,3,high,api,2,0,2,0,0,0,0,0,0,0,2,0,2,0,2
+A03_accept_amex,controlled,API,3,high,service,1,0,1,0,0,0,0,0,0,0,1,0,1,0,1
+A04_validate_email,controlled,API,1,low,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,1,medium,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,1,high,api,0,0,2,0,0,0,0,0,2,0,2,0,2,0,0
+A04_validate_email,controlled,API,1,high,service,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0
+A04_validate_email,controlled,API,2,low,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,2,medium,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,2,high,api,0,0,2,0,0,0,0,0,2,0,2,0,2,0,0
+A04_validate_email,controlled,API,2,high,service,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0
+A04_validate_email,controlled,API,3,low,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,3,medium,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+A04_validate_email,controlled,API,3,high,api,0,0,2,0,0,0,0,0,2,0,2,0,2,0,0
+A04_validate_email,controlled,API,3,high,service,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0
+D01_local_cache,controlled,Dependency,1,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D01_local_cache,controlled,Dependency,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,1,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D01_local_cache,controlled,Dependency,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,1,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D01_local_cache,controlled,Dependency,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,2,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D01_local_cache,controlled,Dependency,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,2,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D01_local_cache,controlled,Dependency,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,2,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D01_local_cache,controlled,Dependency,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,3,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D01_local_cache,controlled,Dependency,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,3,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D01_local_cache,controlled,Dependency,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D01_local_cache,controlled,Dependency,3,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D01_local_cache,controlled,Dependency,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,1,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D02_search_mug,controlled,Dependency,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,1,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D02_search_mug,controlled,Dependency,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,1,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D02_search_mug,controlled,Dependency,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,2,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D02_search_mug,controlled,Dependency,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,2,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D02_search_mug,controlled,Dependency,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,2,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D02_search_mug,controlled,Dependency,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,3,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D02_search_mug,controlled,Dependency,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,3,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D02_search_mug,controlled,Dependency,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D02_search_mug,controlled,Dependency,3,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D02_search_mug,controlled,Dependency,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,1,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D03_search_watch,controlled,Dependency,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,1,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D03_search_watch,controlled,Dependency,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,1,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D03_search_watch,controlled,Dependency,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,2,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D03_search_watch,controlled,Dependency,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,2,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D03_search_watch,controlled,Dependency,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,2,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D03_search_watch,controlled,Dependency,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,3,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D03_search_watch,controlled,Dependency,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,3,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D03_search_watch,controlled,Dependency,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D03_search_watch,controlled,Dependency,3,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D03_search_watch,controlled,Dependency,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,1,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D04_single_product,controlled,Dependency,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,1,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D04_single_product,controlled,Dependency,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,1,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D04_single_product,controlled,Dependency,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,2,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D04_single_product,controlled,Dependency,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,2,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D04_single_product,controlled,Dependency,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,2,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D04_single_product,controlled,Dependency,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,3,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+D04_single_product,controlled,Dependency,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,3,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+D04_single_product,controlled,Dependency,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+D04_single_product,controlled,Dependency,3,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+D04_single_product,controlled,Dependency,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C01_catalog_price,controlled,Configuration,1,low,api,1,0,1,5,0,5,0,0,0,0,1,0,1,0,1
+C01_catalog_price,controlled,Configuration,1,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+C01_catalog_price,controlled,Configuration,1,medium,api,1,0,2,3,0,0,0,0,1,3,2,0,2,3,1
+C01_catalog_price,controlled,Configuration,1,medium,service,0,0,1,1,0,0,0,0,1,1,1,0,1,1,0
+C01_catalog_price,controlled,Configuration,1,high,api,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+C01_catalog_price,controlled,Configuration,1,high,service,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0
+C01_catalog_price,controlled,Configuration,2,low,api,1,0,1,5,0,5,0,0,0,0,1,0,1,0,1
+C01_catalog_price,controlled,Configuration,2,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+C01_catalog_price,controlled,Configuration,2,medium,api,1,0,2,3,0,0,0,0,1,3,2,0,2,3,1
+C01_catalog_price,controlled,Configuration,2,medium,service,0,0,1,1,0,0,0,0,1,1,1,0,1,1,0
+C01_catalog_price,controlled,Configuration,2,high,api,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+C01_catalog_price,controlled,Configuration,2,high,service,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0
+C01_catalog_price,controlled,Configuration,3,low,api,1,0,1,5,0,5,0,0,0,0,1,0,1,0,1
+C01_catalog_price,controlled,Configuration,3,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+C01_catalog_price,controlled,Configuration,3,medium,api,1,0,2,3,0,0,0,0,1,3,2,0,2,3,1
+C01_catalog_price,controlled,Configuration,3,medium,service,0,0,1,1,0,0,0,0,1,1,1,0,1,1,0
+C01_catalog_price,controlled,Configuration,3,high,api,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+C01_catalog_price,controlled,Configuration,3,high,service,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0
+C02_exchange_rate,controlled,Configuration,1,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,1,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,1,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+C02_exchange_rate,controlled,Configuration,1,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+C02_exchange_rate,controlled,Configuration,1,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,2,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,2,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,2,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+C02_exchange_rate,controlled,Configuration,2,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+C02_exchange_rate,controlled,Configuration,2,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,3,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,3,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,3,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+C02_exchange_rate,controlled,Configuration,3,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+C02_exchange_rate,controlled,Configuration,3,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C02_exchange_rate,controlled,Configuration,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,1,low,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,1,medium,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,1,high,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,2,low,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,2,medium,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,2,high,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,3,low,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,3,medium,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+C03_cart_address,controlled,Configuration,3,high,api,0,1,0,1,0,0,0,0,0,0,0,0,0,1,1
+C03_cart_address,controlled,Configuration,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,1,low,api,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,1,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,1,medium,api,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+F01_payment_limit,controlled,Failure/Fallback,1,medium,service,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+F01_payment_limit,controlled,Failure/Fallback,1,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,2,low,api,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,2,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,2,medium,api,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+F01_payment_limit,controlled,Failure/Fallback,2,medium,service,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+F01_payment_limit,controlled,Failure/Fallback,2,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,3,low,api,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,3,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,3,medium,api,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+F01_payment_limit,controlled,Failure/Fallback,3,medium,service,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+F01_payment_limit,controlled,Failure/Fallback,3,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F01_payment_limit,controlled,Failure/Fallback,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,1,low,api,5,0,0,0,0,0,0,0,0,0,5,0,5,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,1,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,1,medium,api,5,0,2,0,3,0,0,0,0,0,1,0,2,0,2
+F02_unknown_currency_fallback,controlled,Failure/Fallback,1,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,1,high,api,5,0,5,0,0,0,0,0,0,0,2,0,5,0,5
+F02_unknown_currency_fallback,controlled,Failure/Fallback,1,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+F02_unknown_currency_fallback,controlled,Failure/Fallback,2,low,api,5,0,0,0,0,0,0,0,0,0,5,0,5,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,2,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,2,medium,api,5,0,2,0,3,0,0,0,0,0,1,0,2,0,2
+F02_unknown_currency_fallback,controlled,Failure/Fallback,2,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,2,high,api,5,0,5,0,0,0,0,0,0,0,2,0,5,0,5
+F02_unknown_currency_fallback,controlled,Failure/Fallback,2,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+F02_unknown_currency_fallback,controlled,Failure/Fallback,3,low,api,5,0,0,0,0,0,0,0,0,0,5,0,5,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,3,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,3,medium,api,5,0,2,0,3,0,0,0,0,0,1,0,2,0,2
+F02_unknown_currency_fallback,controlled,Failure/Fallback,3,medium,service,1,0,0,0,1,0,0,0,0,0,0,0,0,0,0
+F02_unknown_currency_fallback,controlled,Failure/Fallback,3,high,api,5,0,5,0,0,0,0,0,0,0,2,0,5,0,5
+F02_unknown_currency_fallback,controlled,Failure/Fallback,3,high,service,1,0,1,0,0,0,0,0,0,0,0,0,1,0,1
+F03_block_test_mail,controlled,Failure/Fallback,1,low,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,1,medium,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,1,high,api,0,0,2,0,0,0,0,0,2,0,2,0,2,0,0
+F03_block_test_mail,controlled,Failure/Fallback,1,high,service,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0
+F03_block_test_mail,controlled,Failure/Fallback,2,low,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,2,medium,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,2,high,api,0,0,2,0,0,0,0,0,2,0,2,0,2,0,0
+F03_block_test_mail,controlled,Failure/Fallback,2,high,service,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0
+F03_block_test_mail,controlled,Failure/Fallback,3,low,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,3,medium,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+F03_block_test_mail,controlled,Failure/Fallback,3,high,api,0,0,2,0,0,0,0,0,2,0,2,0,2,0,0
+F03_block_test_mail,controlled,Failure/Fallback,3,high,service,0,0,1,0,0,0,0,0,1,0,1,0,1,0,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,1,low,api,1,0,1,5,0,5,0,0,0,0,1,0,1,0,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,1,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,1,medium,api,1,0,2,3,0,0,0,0,1,3,2,0,2,3,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,1,medium,service,0,0,1,1,0,0,0,0,1,1,1,0,1,1,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,1,high,api,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,1,high,service,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,2,low,api,1,0,1,5,0,5,0,0,0,0,1,0,1,0,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,2,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,2,medium,api,1,0,2,3,0,0,0,0,1,3,2,0,2,3,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,2,medium,service,0,0,1,1,0,0,0,0,1,1,1,0,1,1,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,2,high,api,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,2,high,service,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,3,low,api,1,0,1,5,0,5,0,0,0,0,1,0,1,0,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,3,low,service,0,0,0,1,0,1,0,0,0,0,0,0,0,0,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,3,medium,api,1,0,2,3,0,0,0,0,1,3,2,0,2,3,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,3,medium,service,0,0,1,1,0,0,0,0,1,1,1,0,1,1,0
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,3,high,api,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+R01_catalog_refresh_d2c729,real_commit_replay,Real catalog commit,3,high,service,0,0,1,0,0,0,0,0,1,0,0,0,1,0,0
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,1,low,api,7,0,3,1,0,1,0,0,0,0,5,0,7,0,3
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,1,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,1,medium,api,7,0,5,0,3,0,0,0,1,0,2,0,5,0,4
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,1,medium,service,1,0,1,0,1,0,0,0,1,0,1,0,1,0,0
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,1,high,api,7,0,8,0,0,0,0,0,1,0,2,0,8,0,7
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,1,high,service,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,2,low,api,7,0,3,1,0,1,0,0,0,0,5,0,7,0,3
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,2,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,2,medium,api,7,0,5,0,3,0,0,0,1,0,2,0,5,0,4
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,2,medium,service,1,0,1,0,1,0,0,0,1,0,1,0,1,0,0
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,2,high,api,7,0,8,0,0,0,0,0,1,0,2,0,8,0,7
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,2,high,service,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,3,low,api,7,0,3,1,0,1,0,0,0,0,5,0,7,0,3
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,3,low,service,1,0,0,0,0,0,0,0,0,0,1,0,1,0,0
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,3,medium,api,7,0,5,0,3,0,0,0,1,0,2,0,5,0,4
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,3,medium,service,1,0,1,0,1,0,0,0,1,0,1,0,1,0,0
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,3,high,api,7,0,8,0,0,0,0,0,1,0,2,0,8,0,7
+R02_camera_name_9b4e81,real_commit_replay,Real catalog commit,3,high,service,1,0,2,0,0,0,0,0,1,0,1,0,2,0,1
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,1,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,1,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,1,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,1,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,1,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,2,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,2,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,2,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,2,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,2,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,3,low,api,0,0,0,5,0,5,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,3,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,3,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,3,medium,service,0,0,0,1,0,0,0,0,0,1,0,0,0,1,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,3,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R04_carry_math_97a36a,real_commit_replay,Real currency commit,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,1,low,api,0,0,0,3,0,3,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,1,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,1,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,1,medium,service,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,1,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,2,low,api,0,0,0,3,0,3,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,2,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,2,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,2,medium,service,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,2,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,3,low,api,0,0,0,3,0,3,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,3,low,service,0,0,0,2,0,2,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,3,medium,api,0,0,0,3,0,0,0,0,0,3,0,0,0,3,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,3,medium,service,0,0,0,2,0,0,0,0,0,2,0,0,0,2,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,3,high,api,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R05_flat_shipping_af0515,real_commit_replay,Real shipping commit,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,1,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,1,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,1,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,1,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,1,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,1,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,2,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,2,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,2,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,2,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,2,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,2,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,3,low,api,3,0,0,0,0,0,0,0,0,0,3,0,3,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,3,low,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,3,medium,api,3,0,1,0,2,0,0,0,0,0,1,0,1,0,1
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,3,medium,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,3,high,api,3,0,3,0,0,0,0,0,0,0,2,0,3,0,3
+R06_exclude_seen_9889e4,real_commit_replay,Real recommendation commit,3,high,service,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0

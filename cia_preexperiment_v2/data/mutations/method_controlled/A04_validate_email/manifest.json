@@ -1,0 +1,12 @@
+{
+  "case_id": "A04_validate_email",
+  "cohort": "controlled",
+  "change_type": "API",
+  "changed_service": "emailservice",
+  "changed_file": "src/emailservice/email_server.py",
+  "description": "Validate recipient format in dummy email API",
+  "expected_mechanism": "Malformed email changes from success to INVALID_ARGUMENT",
+  "original_sha256": "a850603c995b5931ef9749d6cd764a8805c52817babca33ba6de001a8ea625ce",
+  "changed_sha256": "9d9b5a218baed34a879fc9e9cc8abee99de93485c5412df4bdd796a766a3195a",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\A04_validate_email\\compose.override.yml"
+}

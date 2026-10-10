@@ -1,0 +1,2 @@
+# Preserve exact exported bytes for SOURCE_MANIFEST verification across operating systems.
+* -text

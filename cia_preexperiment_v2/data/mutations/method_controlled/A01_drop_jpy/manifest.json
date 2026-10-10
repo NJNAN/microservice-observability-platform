@@ -1,0 +1,12 @@
+{
+  "case_id": "A01_drop_jpy",
+  "cohort": "controlled",
+  "change_type": "API",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "description": "Withdraw JPY from advertised currencies",
+  "expected_mechanism": "Supported-currency API and frontend selector change",
+  "original_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "changed_sha256": "2d3ef76eba521468b3a7ae274059d40fb680c37e5b621ac22c0f9398b12b4191",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\A01_drop_jpy\\compose.override.yml"
+}

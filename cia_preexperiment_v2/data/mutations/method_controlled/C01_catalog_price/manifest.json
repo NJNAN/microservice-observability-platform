@@ -1,0 +1,10 @@
+{
+  "case_id": "C01_catalog_price",
+  "cohort": "controlled",
+  "change_type": "Configuration",
+  "changed_service": "productcatalogservice",
+  "changed_file": "src/productcatalogservice/products.json",
+  "description": "Raise sunglasses catalog price from $19.99 to $24.99",
+  "expected_mechanism": "Catalog, frontend, checkout outputs change",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\C01_catalog_price\\compose.override.yml"
+}

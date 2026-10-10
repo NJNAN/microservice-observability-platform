@@ -1,0 +1,12 @@
+{
+  "case_id": "D02_search_mug",
+  "cohort": "controlled",
+  "change_type": "Dependency",
+  "changed_service": "recommendationservice",
+  "changed_file": "src/recommendationservice/recommendation_server.py",
+  "description": "Select candidates from catalog SearchProducts for mugs",
+  "expected_mechanism": "Catalog API dependency and recommendations change",
+  "original_sha256": "4d777f010e019de588138239272e272f2ea54b8536aa0b34fb5faf76739d343c",
+  "changed_sha256": "cbf186e54863ae7ee421e5ed058f3819524c81d7c45f89728585541838f32124",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\D02_search_mug\\compose.override.yml"
+}

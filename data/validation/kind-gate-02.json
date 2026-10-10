@@ -1,0 +1,557 @@
+{
+  "collected_at": 1790494341.3779318,
+  "query_start_us": 1790494332047163,
+  "query_end_us": 1790494334289193,
+  "workload": {
+    "kind": "system_execution_gate_fixed_workload",
+    "timestamp_utc": "2026-09-27T07:32:13.288973+00:00",
+    "base_url": "http://frontend:80",
+    "seed": 42,
+    "repeats": 1,
+    "interval_s": 0.2,
+    "rows": [
+      {
+        "run_id": 1,
+        "step": "home",
+        "method": "GET",
+        "path": "/",
+        "status": 200,
+        "latency_ms": 89.958,
+        "body_sha256": "36d41374e455a84ccaa6a4ea76fcd5862d77f86f31b1fb88dd8eb3830c2a69af",
+        "body_bytes": 10511,
+        "error": null
+      },
+      {
+        "run_id": 1,
+        "step": "product",
+        "method": "GET",
+        "path": "/product/OLJCESPC7Z",
+        "status": 200,
+        "latency_ms": 35.903,
+        "body_sha256": "04fb9559c72d0ed5529d1a230175a79cb6c24f5e2729cb1ed0c99dfffe17389a",
+        "body_bytes": 7964,
+        "error": null
+      },
+      {
+        "run_id": 1,
+        "step": "add_cart",
+        "method": "POST",
+        "path": "/cart",
+        "status": 200,
+        "latency_ms": 31.019,
+        "body_sha256": "c8599f68c34fa8487048c93aad805014ad9754f678356fe29488a10bbdf3c631",
+        "body_bytes": 16484,
+        "error": null
+      },
+      {
+        "run_id": 1,
+        "step": "view_cart",
+        "method": "GET",
+        "path": "/cart",
+        "status": 200,
+        "latency_ms": 17.886,
+        "body_sha256": "013801871a597c9bb8ed47eb0479b4fddc53e972aaa479dfb64121c497e352ef",
+        "body_bytes": 16478,
+        "error": null
+      },
+      {
+        "run_id": 1,
+        "step": "checkout",
+        "method": "POST",
+        "path": "/cart/checkout",
+        "status": 200,
+        "latency_ms": 66.088,
+        "body_sha256": "40a10bb50a665ec1d19fbabbf220cce6247acc871d94ce13e61761b9041eb570",
+        "body_bytes": 6837,
+        "error": null
+      }
+    ]
+  },
+  "summary": {
+    "raw_trace_count": 12,
+    "raw_span_count": 154,
+    "excluded_telemetry_export_traces": 1,
+    "trace_count": 11,
+    "span_count": 153,
+    "observed_services": [
+      "adservice",
+      "cartservice",
+      "checkoutservice",
+      "currencyservice",
+      "emailservice",
+      "frontend",
+      "paymentservice",
+      "productcatalogservice",
+      "recommendationservice",
+      "shippingservice"
+    ],
+    "missing_services": [],
+    "other_process_services": [],
+    "unique_cross_service_directed_edges": 14,
+    "edges": [
+      {
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "call_count": 2,
+        "trace_count": 1,
+        "calls": 2
+      },
+      {
+        "source": "checkoutservice",
+        "target": "currencyservice",
+        "call_count": 2,
+        "trace_count": 1,
+        "calls": 2
+      },
+      {
+        "source": "checkoutservice",
+        "target": "emailservice",
+        "call_count": 1,
+        "trace_count": 1,
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "paymentservice",
+        "call_count": 1,
+        "trace_count": 1,
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "productcatalogservice",
+        "call_count": 1,
+        "trace_count": 1,
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "shippingservice",
+        "call_count": 2,
+        "trace_count": 1,
+        "calls": 2
+      },
+      {
+        "source": "frontend",
+        "target": "adservice",
+        "call_count": 2,
+        "trace_count": 2,
+        "calls": 2
+      },
+      {
+        "source": "frontend",
+        "target": "cartservice",
+        "call_count": 5,
+        "trace_count": 5,
+        "calls": 5
+      },
+      {
+        "source": "frontend",
+        "target": "checkoutservice",
+        "call_count": 1,
+        "trace_count": 1,
+        "calls": 1
+      },
+      {
+        "source": "frontend",
+        "target": "currencyservice",
+        "call_count": 19,
+        "trace_count": 5,
+        "calls": 19
+      },
+      {
+        "source": "frontend",
+        "target": "productcatalogservice",
+        "call_count": 25,
+        "trace_count": 6,
+        "calls": 25
+      },
+      {
+        "source": "frontend",
+        "target": "recommendationservice",
+        "call_count": 4,
+        "trace_count": 4,
+        "calls": 4
+      },
+      {
+        "source": "frontend",
+        "target": "shippingservice",
+        "call_count": 2,
+        "trace_count": 2,
+        "calls": 2
+      },
+      {
+        "source": "recommendationservice",
+        "target": "productcatalogservice",
+        "call_count": 4,
+        "trace_count": 4,
+        "calls": 4
+      }
+    ],
+    "server_edges_with_client_parent": 71,
+    "business_grpc_client_span_count": 71,
+    "matched_client_server_span_count": 71,
+    "unmatched_client_span_count": 0,
+    "unmatched_client_spans": [],
+    "broken_parent_reference_count": 0,
+    "broken_parent_references": [],
+    "root_spans_by_service": {
+      "checkoutservice": 1,
+      "currencyservice": 1,
+      "frontend": 6,
+      "productcatalogservice": 1,
+      "recommendationservice": 1,
+      "shippingservice": 1
+    },
+    "frontend_to_second_downstream_chains": [
+      {
+        "trace_id": "56778199c031f055dc177946a104c0a8",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "cartservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "currencyservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "emailservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "paymentservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "shippingservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "cb36e56adb0dcc4ac7071d9f5a367be8",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "cbe8098986fb8d86f3e1e666732bd870",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      }
+    ],
+    "verified_ancestral_service_paths": [
+      {
+        "trace_id": "56778199c031f055dc177946a104c0a8",
+        "leaf_span_id": "7e40454dd2814d6f",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "ac650644a23b6f08",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "cartservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "68617e146ace1e96",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "0e11001e2ec33adf",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "paymentservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "19b200affebc17ef",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "shippingservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "93a3d887a5896309",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "emailservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "7eb5cd4a31fd6cfa",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "shippingservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "ecedbe75f1ea453c",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "cartservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "e4e4498757c3e857",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "df360e24c806fd79",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "currencyservice"
+        ]
+      },
+      {
+        "trace_id": "b0f950870cffa91c5ffd051860604178",
+        "leaf_span_id": "e8a525ff5f6426ff",
+        "services": [
+          "frontend",
+          "checkoutservice",
+          "currencyservice"
+        ]
+      },
+      {
+        "trace_id": "cb36e56adb0dcc4ac7071d9f5a367be8",
+        "leaf_span_id": "2a40c572f319e367",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      },
+      {
+        "trace_id": "cbe8098986fb8d86f3e1e666732bd870",
+        "leaf_span_id": "de97469927016ca3",
+        "services": [
+          "frontend",
+          "recommendationservice",
+          "productcatalogservice"
+        ]
+      }
+    ],
+    "nodes": [
+      {
+        "id": "adservice"
+      },
+      {
+        "id": "cartservice"
+      },
+      {
+        "id": "checkoutservice"
+      },
+      {
+        "id": "currencyservice"
+      },
+      {
+        "id": "emailservice"
+      },
+      {
+        "id": "frontend"
+      },
+      {
+        "id": "paymentservice"
+      },
+      {
+        "id": "productcatalogservice"
+      },
+      {
+        "id": "recommendationservice"
+      },
+      {
+        "id": "shippingservice"
+      }
+    ],
+    "rpc_calls": [
+      {
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "operation": "hipstershop.CartService/EmptyCart",
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "cartservice",
+        "operation": "hipstershop.CartService/GetCart",
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "currencyservice",
+        "operation": "grpc.hipstershop.CurrencyService/Convert",
+        "calls": 2
+      },
+      {
+        "source": "checkoutservice",
+        "target": "emailservice",
+        "operation": "/hipstershop.EmailService/SendOrderConfirmation",
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "paymentservice",
+        "operation": "grpc.hipstershop.PaymentService/Charge",
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "productcatalogservice",
+        "operation": "hipstershop.ProductCatalogService/GetProduct",
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "shippingservice",
+        "operation": "hipstershop.ShippingService/GetQuote",
+        "calls": 1
+      },
+      {
+        "source": "checkoutservice",
+        "target": "shippingservice",
+        "operation": "hipstershop.ShippingService/ShipOrder",
+        "calls": 1
+      },
+      {
+        "source": "frontend",
+        "target": "adservice",
+        "operation": "hipstershop.AdService/GetAds",
+        "calls": 2
+      },
+      {
+        "source": "frontend",
+        "target": "cartservice",
+        "operation": "hipstershop.CartService/AddItem",
+        "calls": 1
+      },
+      {
+        "source": "frontend",
+        "target": "cartservice",
+        "operation": "hipstershop.CartService/GetCart",
+        "calls": 4
+      },
+      {
+        "source": "frontend",
+        "target": "checkoutservice",
+        "operation": "hipstershop.CheckoutService/PlaceOrder",
+        "calls": 1
+      },
+      {
+        "source": "frontend",
+        "target": "currencyservice",
+        "operation": "grpc.hipstershop.CurrencyService/Convert",
+        "calls": 14
+      },
+      {
+        "source": "frontend",
+        "target": "currencyservice",
+        "operation": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+        "calls": 5
+      },
+      {
+        "source": "frontend",
+        "target": "productcatalogservice",
+        "operation": "hipstershop.ProductCatalogService/GetProduct",
+        "calls": 24
+      },
+      {
+        "source": "frontend",
+        "target": "productcatalogservice",
+        "operation": "hipstershop.ProductCatalogService/ListProducts",
+        "calls": 1
+      },
+      {
+        "source": "frontend",
+        "target": "recommendationservice",
+        "operation": "/hipstershop.RecommendationService/ListRecommendations",
+        "calls": 4
+      },
+      {
+        "source": "frontend",
+        "target": "shippingservice",
+        "operation": "hipstershop.ShippingService/GetQuote",
+        "calls": 2
+      },
+      {
+        "source": "recommendationservice",
+        "target": "productcatalogservice",
+        "operation": "hipstershop.ProductCatalogService/ListProducts",
+        "calls": 4
+      }
+    ]
+  },
+  "gate_pass": true
+}

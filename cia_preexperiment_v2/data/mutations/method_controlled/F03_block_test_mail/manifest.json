@@ -1,0 +1,12 @@
+{
+  "case_id": "F03_block_test_mail",
+  "cohort": "controlled",
+  "change_type": "Failure/Fallback",
+  "changed_service": "emailservice",
+  "changed_file": "src/emailservice/email_server.py",
+  "description": "Block delivery to .test recipients",
+  "expected_mechanism": "SendOrderConfirmation returns PERMISSION_DENIED while checkout logs tolerated failure",
+  "original_sha256": "a850603c995b5931ef9749d6cd764a8805c52817babca33ba6de001a8ea625ce",
+  "changed_sha256": "b33e519825493517e4d8a48799aad5de831999c2b6705ff4bf1df3c7735776f1",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\F03_block_test_mail\\compose.override.yml"
+}

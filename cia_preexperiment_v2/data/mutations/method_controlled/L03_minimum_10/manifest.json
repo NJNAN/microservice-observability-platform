@@ -1,0 +1,12 @@
+{
+  "case_id": "L03_minimum_10",
+  "cohort": "controlled",
+  "change_type": "Logic",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "description": "Introduce a minimum converted amount of 10 units",
+  "expected_mechanism": "Low-priced products change",
+  "original_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "changed_sha256": "960858501536a9b740d3a45bad57d75e93132688381ac00d154d121f7d8f6c1f",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\L03_minimum_10\\compose.override.yml"
+}

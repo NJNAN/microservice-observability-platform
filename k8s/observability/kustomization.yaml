@@ -1,0 +1,7 @@
+resources:
+- stack.yaml
+- otel-config.yaml
+- prometheus-config.yaml
+- grafana-datasources.yaml
+- grafana-providers.yaml
+- grafana-dashboards.yaml

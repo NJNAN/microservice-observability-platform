@@ -1,0 +1,12 @@
+{
+  "case_id": "C02_exchange_rate",
+  "cohort": "controlled",
+  "change_type": "Configuration",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/data/currency_conversion.json",
+  "description": "Update USD exchange-rate data from 1.1305 to 1.2000",
+  "expected_mechanism": "Cross-currency conversions change",
+  "original_sha256": "19a38bb8616729b4562c0319a7d2e4f4d99cc2eddf2e56fab7006c6e46f5c23e",
+  "changed_sha256": "a815612527caa96ea876734e88fbcf9e8825a87d0bb2ec04dbbd79a2a21fb24b",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\C02_exchange_rate\\compose.override.yml"
+}

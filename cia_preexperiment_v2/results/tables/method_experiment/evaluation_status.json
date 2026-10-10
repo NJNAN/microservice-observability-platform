@@ -1,0 +1,8 @@
+{
+  "evaluated_cases": 23,
+  "excluded_no_observable_change": [
+    "R03_nanos_rounding_076819"
+  ],
+  "failed_or_incomplete": [],
+  "score_rows": 2484
+}

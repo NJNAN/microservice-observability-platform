@@ -1,0 +1,179 @@
+{
+  "status": "success",
+  "data": {
+    "resultType": "vector",
+    "result": [
+      {
+        "metric": {
+          "span_name": "grpc.health.v1.Health/Check"
+        },
+        "value": [
+          1790498242.336,
+          "7"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "frontend"
+        },
+        "value": [
+          1790498242.336,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "/grpc.health.v1.Health/Check"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "grpc.grpc.health.v1.Health/Check"
+        },
+        "value": [
+          1790498242.336,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.ProductCatalogService/GetProduct"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.ProductCatalogService/ListProducts"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.ShippingService/GetQuote"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.ShippingService/ShipOrder"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.CartService/AddItem"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.CartService/EmptyCart"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.CartService/GetCart"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.AdService/GetAds"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.CheckoutService/PlaceOrder"
+        },
+        "value": [
+          1790498242.336,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "grpc.hipstershop.CurrencyService/Convert"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "/hipstershop.EmailService/SendOrderConfirmation"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "grpc.hipstershop.PaymentService/Charge"
+        },
+        "value": [
+          1790498242.336,
+          "2"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "/hipstershop.RecommendationService/ListRecommendations"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      },
+      {
+        "metric": {
+          "span_name": "hipstershop.ProductCatalogService/SearchProducts"
+        },
+        "value": [
+          1790498242.336,
+          "1"
+        ]
+      }
+    ]
+  }
+}

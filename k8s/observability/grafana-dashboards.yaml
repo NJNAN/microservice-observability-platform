@@ -1,0 +1,129 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-dashboards
+data:
+  distributed-overview.json: "{\n  \"uid\": \"distributed-overview\",\n  \"title\"\
+    : \"Distributed System Overview\",\n  \"schemaVersion\": 40,\n  \"version\": 1,\n\
+    \  \"refresh\": \"5s\",\n  \"time\": {\n    \"from\": \"now-15m\",\n    \"to\"\
+    : \"now\"\n  },\n  \"panels\": [\n    {\n      \"id\": 1,\n      \"type\": \"\
+    timeseries\",\n      \"title\": \"Cross-service client traffic by RPC\",\n   \
+    \   \"datasource\": {\n        \"type\": \"prometheus\",\n        \"uid\": \"\
+    prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"y\"\
+    : 0,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n \
+    \       {\n          \"refId\": \"A\",\n          \"expr\": \"sum by(service_name,span_name)\
+    \ (rate(traces_span_metrics_calls_total{span_kind=\\\"SPAN_KIND_CLIENT\\\",span_name=~\\\
+    \".*hipstershop.*\\\"}[2m]))\",\n          \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 2,\n      \"type\": \"timeseries\"\
+    ,\n      \"title\": \"Slow services (p95 ms)\",\n      \"datasource\": {\n   \
+    \     \"type\": \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n \
+    \     \"gridPos\": {\n        \"x\": 12,\n        \"y\": 0,\n        \"w\": 12,\n\
+    \        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\"\
+    : \"A\",\n          \"expr\": \"histogram_quantile(0.95, sum by(le,service_name)\
+    \ (rate(traces_span_metrics_duration_milliseconds_bucket{span_kind=\\\"SPAN_KIND_SERVER\\\
+    \",span_name!~\\\".*grpc.health.*\\\"}[2m])))\",\n          \"legendFormat\":\
+    \ \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 3,\n      \"type\": \"timeseries\"\
+    ,\n      \"title\": \"Error services\",\n      \"datasource\": {\n        \"type\"\
+    : \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n      \"gridPos\"\
+    : {\n        \"x\": 0,\n        \"y\": 8,\n        \"w\": 12,\n        \"h\":\
+    \ 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n\
+    \          \"expr\": \"sum by(service_name) (rate(traces_span_metrics_calls_total{span_kind=\\\
+    \"SPAN_KIND_SERVER\\\",span_name!~\\\".*grpc.health.*\\\",status_code=\\\"STATUS_CODE_ERROR\\\
+    \"}[2m]))\",\n          \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"title\": \"\
+    Runtime topology JSON\",\n      \"url\": \"http://localhost:8000/api/topology\"\
+    ,\n      \"targetBlank\": true\n    },\n    {\n      \"title\": \"Jaeger traces\"\
+    ,\n      \"url\": \"http://localhost:16687\",\n      \"targetBlank\": true\n \
+    \   }\n  ]\n}"
+  mutation-experiments.json: "{\n  \"uid\": \"mutation-experiments\",\n  \"title\"\
+    : \"Mutation / Failure Experiment\",\n  \"schemaVersion\": 40,\n  \"version\"\
+    : 1,\n  \"refresh\": \"5s\",\n  \"time\": {\n    \"from\": \"now-15m\",\n    \"\
+    to\": \"now\"\n  },\n  \"panels\": [\n    {\n      \"id\": 1,\n      \"type\"\
+    : \"table\",\n      \"title\": \"Latest case, change type, affected service, status\"\
+    ,\n      \"datasource\": {\n        \"type\": \"prometheus\",\n        \"uid\"\
+    : \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 0,\n        \"\
+    y\": 0,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n\
+    \        {\n          \"refId\": \"A\",\n          \"expr\": \"mop_experiment_info\"\
+    ,\n          \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    ,\n          \"instant\": true,\n          \"format\": \"table\"\n        }\n\
+    \      ]\n    },\n    {\n      \"id\": 2,\n      \"type\": \"timeseries\",\n \
+    \     \"title\": \"Workload success ratio\",\n      \"datasource\": {\n      \
+    \  \"type\": \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n    \
+    \  \"gridPos\": {\n        \"x\": 12,\n        \"y\": 0,\n        \"w\": 12,\n\
+    \        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\"\
+    : \"A\",\n          \"expr\": \"mop_workload_success_ratio\",\n          \"legendFormat\"\
+    : \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 3,\n      \"type\": \"timeseries\"\
+    ,\n      \"title\": \"Detected HTTP errors\",\n      \"datasource\": {\n     \
+    \   \"type\": \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n   \
+    \   \"gridPos\": {\n        \"x\": 0,\n        \"y\": 8,\n        \"w\": 12,\n\
+    \        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\"\
+    : \"A\",\n          \"expr\": \"mop_detected_errors\",\n          \"legendFormat\"\
+    : \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 4,\n      \"type\": \"timeseries\"\
+    ,\n      \"title\": \"Before/after mean duration (ms)\",\n      \"datasource\"\
+    : {\n        \"type\": \"prometheus\",\n        \"uid\": \"prometheus\"\n    \
+    \  },\n      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 8,\n        \"\
+    w\": 12,\n        \"h\": 8\n      },\n      \"targets\": [\n        {\n      \
+    \    \"refId\": \"A\",\n          \"expr\": \"mop_workload_duration_ms\",\n  \
+    \        \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 5,\n      \"type\": \"stat\"\
+    ,\n      \"title\": \"Experiment timestamp\",\n      \"datasource\": {\n     \
+    \   \"type\": \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n   \
+    \   \"gridPos\": {\n        \"x\": 0,\n        \"y\": 16,\n        \"w\": 12,\n\
+    \        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\"\
+    : \"A\",\n          \"expr\": \"mop_experiment_timestamp_seconds * 1000\",\n \
+    \         \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ],\n      \"fieldConfig\": {\n        \"defaults\": {\n   \
+    \       \"unit\": \"dateTimeAsIso\"\n        }\n      }\n    },\n    {\n     \
+    \ \"id\": 6,\n      \"type\": \"timeseries\",\n      \"title\": \"Run outcomes\"\
+    ,\n      \"datasource\": {\n        \"type\": \"prometheus\",\n        \"uid\"\
+    : \"prometheus\"\n      },\n      \"gridPos\": {\n        \"x\": 12,\n       \
+    \ \"y\": 16,\n        \"w\": 12,\n        \"h\": 8\n      },\n      \"targets\"\
+    : [\n        {\n          \"refId\": \"A\",\n          \"expr\": \"mop_mutation_runs\"\
+    ,\n          \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"title\": \"\
+    Runtime topology JSON\",\n      \"url\": \"http://localhost:8000/api/topology\"\
+    ,\n      \"targetBlank\": true\n    },\n    {\n      \"title\": \"Jaeger traces\"\
+    ,\n      \"url\": \"http://localhost:16687\",\n      \"targetBlank\": true\n \
+    \   }\n  ]\n}"
+  service-overview.json: "{\n  \"uid\": \"service-overview\",\n  \"title\": \"Service\
+    \ Overview\",\n  \"schemaVersion\": 40,\n  \"version\": 1,\n  \"refresh\": \"\
+    5s\",\n  \"time\": {\n    \"from\": \"now-15m\",\n    \"to\": \"now\"\n  },\n\
+    \  \"panels\": [\n    {\n      \"id\": 1,\n      \"type\": \"timeseries\",\n \
+    \     \"title\": \"Request rate\",\n      \"datasource\": {\n        \"type\"\
+    : \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n      \"gridPos\"\
+    : {\n        \"x\": 0,\n        \"y\": 0,\n        \"w\": 12,\n        \"h\":\
+    \ 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n\
+    \          \"expr\": \"sum by(service_name) (rate(traces_span_metrics_calls_total{span_kind=\\\
+    \"SPAN_KIND_SERVER\\\",span_name!~\\\".*grpc.health.*\\\"}[2m]))\",\n        \
+    \  \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 2,\n      \"type\": \"timeseries\"\
+    ,\n      \"title\": \"Error rate\",\n      \"datasource\": {\n        \"type\"\
+    : \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n      \"gridPos\"\
+    : {\n        \"x\": 12,\n        \"y\": 0,\n        \"w\": 12,\n        \"h\"\
+    : 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n\
+    \          \"expr\": \"sum by(service_name) (rate(traces_span_metrics_calls_total{span_kind=\\\
+    \"SPAN_KIND_SERVER\\\",span_name!~\\\".*grpc.health.*\\\",status_code=\\\"STATUS_CODE_ERROR\\\
+    \"}[2m]))\",\n          \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 3,\n      \"type\": \"timeseries\"\
+    ,\n      \"title\": \"p95 duration (ms)\",\n      \"datasource\": {\n        \"\
+    type\": \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n      \"gridPos\"\
+    : {\n        \"x\": 0,\n        \"y\": 8,\n        \"w\": 12,\n        \"h\":\
+    \ 8\n      },\n      \"targets\": [\n        {\n          \"refId\": \"A\",\n\
+    \          \"expr\": \"histogram_quantile(0.95, sum by(le,service_name) (rate(traces_span_metrics_duration_milliseconds_bucket{span_kind=\\\
+    \"SPAN_KIND_SERVER\\\",span_name!~\\\".*grpc.health.*\\\"}[2m])))\",\n       \
+    \   \"legendFormat\": \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    },\n    {\n      \"id\": 4,\n      \"type\": \"timeseries\"\
+    ,\n      \"title\": \"Deployment availability\",\n      \"datasource\": {\n  \
+    \      \"type\": \"prometheus\",\n        \"uid\": \"prometheus\"\n      },\n\
+    \      \"gridPos\": {\n        \"x\": 12,\n        \"y\": 8,\n        \"w\": 12,\n\
+    \        \"h\": 8\n      },\n      \"targets\": [\n        {\n          \"refId\"\
+    : \"A\",\n          \"expr\": \"mop_service_ready\",\n          \"legendFormat\"\
+    : \"{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}\"\
+    \n        }\n      ]\n    }\n  ],\n  \"links\": [\n    {\n      \"title\": \"\
+    Runtime topology JSON\",\n      \"url\": \"http://localhost:8000/api/topology\"\
+    ,\n      \"targetBlank\": true\n    },\n    {\n      \"title\": \"Jaeger traces\"\
+    ,\n      \"url\": \"http://localhost:16687\",\n      \"targetBlank\": true\n \
+    \   }\n  ]\n}"

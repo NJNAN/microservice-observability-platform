@@ -1,0 +1,15 @@
+{
+  "case_id": "R04_carry_math_97a36a",
+  "cohort": "real_commit_replay",
+  "change_type": "Real currency commit",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "commit": "97a36a63743010636a072c35e63a2ab296c5b216",
+  "parent": "1fa7b44c836adf2829c67107e6b6a8beb331ba43",
+  "replay_scope": "historical conversion-function hunk ported to traced v0.10.4; not full historical tree",
+  "description": "Fix double-counting of fractional units in carry arithmetic",
+  "original_sha256": "afc91946de7f63c213b60497c611848d60816b97098f8367cae90207e4e679ff",
+  "changed_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "override_original": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R04_carry_math_97a36a\\original.override.yml",
+  "override_changed": null
+}

@@ -1,0 +1,4 @@
+services:
+  currencyservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/commits/method_replays/R03_nanos_rounding_076819/server_original.js:/usr/src/app/server.js:ro

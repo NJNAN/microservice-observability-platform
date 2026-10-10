@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "@opentelemetry/exporter-trace-otlp-grpc": "^0.208.0"
+  }
+}

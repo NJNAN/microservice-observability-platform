@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: grafana-datasources
+data:
+  datasources.yaml: "apiVersion: 1\ndatasources:\n- name: Prometheus\n  uid: prometheus\n\
+    \  type: prometheus\n  access: proxy\n  url: http://prometheus:9090\n  isDefault:\
+    \ true\n"

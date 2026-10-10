@@ -1,0 +1,4 @@
+services:
+  emailservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/F03_block_test_mail/email_server.py:/email_server/email_server.py:ro

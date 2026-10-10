@@ -1,0 +1,113 @@
+{
+  "uid": "service-overview",
+  "title": "Service Overview",
+  "schemaVersion": 40,
+  "version": 1,
+  "refresh": "5s",
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "timeseries",
+      "title": "Request rate",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by(service_name) (rate(traces_span_metrics_calls_total{span_kind=\"SPAN_KIND_SERVER\",span_name!~\".*grpc.health.*\"}[2m]))",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Error rate",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "sum by(service_name) (rate(traces_span_metrics_calls_total{span_kind=\"SPAN_KIND_SERVER\",span_name!~\".*grpc.health.*\",status_code=\"STATUS_CODE_ERROR\"}[2m]))",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "p95 duration (ms)",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "histogram_quantile(0.95, sum by(le,service_name) (rate(traces_span_metrics_duration_milliseconds_bucket{span_kind=\"SPAN_KIND_SERVER\",span_name!~\".*grpc.health.*\"}[2m])))",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Deployment availability",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "mop_service_ready",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "title": "Runtime topology JSON",
+      "url": "http://localhost:8000/api/topology",
+      "targetBlank": true
+    },
+    {
+      "title": "Jaeger traces",
+      "url": "http://localhost:16687",
+      "targetBlank": true
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "case_id": "A03_accept_amex",
+  "cohort": "controlled",
+  "change_type": "API",
+  "changed_service": "paymentservice",
+  "changed_file": "src/paymentservice/charge.js",
+  "description": "Accept AMEX cards in addition to Visa and MasterCard",
+  "expected_mechanism": "Charge AMEX error becomes success",
+  "original_sha256": "c6b075b07c784844d7c95a7f29a2055aeb6266eac05643ebe8432a4387258bf4",
+  "changed_sha256": "cb2d5093c5af859da99944b5d380b390b624e62e54e185dc6fd38fb1b47855ca",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\A03_accept_amex\\compose.override.yml"
+}

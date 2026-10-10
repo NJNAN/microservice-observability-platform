@@ -1,0 +1,164 @@
+{
+  "uid": "mutation-experiments",
+  "title": "Mutation / Failure Experiment",
+  "schemaVersion": 40,
+  "version": 1,
+  "refresh": "5s",
+  "time": {
+    "from": "now-15m",
+    "to": "now"
+  },
+  "panels": [
+    {
+      "id": 1,
+      "type": "table",
+      "title": "Latest case, change type, affected service, status",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "mop_experiment_info",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}",
+          "instant": true,
+          "format": "table"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "type": "timeseries",
+      "title": "Workload success ratio",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 0,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "mop_workload_success_ratio",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "type": "timeseries",
+      "title": "Detected HTTP errors",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "mop_detected_errors",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "type": "timeseries",
+      "title": "Before/after mean duration (ms)",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 8,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "mop_workload_duration_ms",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "type": "stat",
+      "title": "Experiment timestamp",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 0,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "mop_experiment_timestamp_seconds * 1000",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ],
+      "fieldConfig": {
+        "defaults": {
+          "unit": "dateTimeAsIso"
+        }
+      }
+    },
+    {
+      "id": 6,
+      "type": "timeseries",
+      "title": "Run outcomes",
+      "datasource": {
+        "type": "prometheus",
+        "uid": "prometheus"
+      },
+      "gridPos": {
+        "x": 12,
+        "y": 16,
+        "w": 12,
+        "h": 8
+      },
+      "targets": [
+        {
+          "refId": "A",
+          "expr": "mop_mutation_runs",
+          "legendFormat": "{{service_name}}{{phase}}{{case_id}}{{change_type}}{{service}}{{status}}{{outcome}}"
+        }
+      ]
+    }
+  ],
+  "links": [
+    {
+      "title": "Runtime topology JSON",
+      "url": "http://localhost:8000/api/topology",
+      "targetBlank": true
+    },
+    {
+      "title": "Jaeger traces",
+      "url": "http://localhost:16687",
+      "targetBlank": true
+    }
+  ]
+}

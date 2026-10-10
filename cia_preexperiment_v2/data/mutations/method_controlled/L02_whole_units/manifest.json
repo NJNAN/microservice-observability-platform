@@ -1,0 +1,12 @@
+{
+  "case_id": "L02_whole_units",
+  "cohort": "controlled",
+  "change_type": "Logic",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "description": "Round converted prices down to whole currency units",
+  "expected_mechanism": "Fractional prices change",
+  "original_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "changed_sha256": "739b5f1a660762670efe7df674810fe45215dbbaa179dd44ea4ec9074102ace6",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\L02_whole_units\\compose.override.yml"
+}

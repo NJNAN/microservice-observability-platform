@@ -1,0 +1,17 @@
+{
+  "case_id": "R05_flat_shipping_af0515",
+  "cohort": "real_commit_replay",
+  "change_type": "Real shipping commit",
+  "changed_service": "shippingservice",
+  "changed_file": "src/shippingservice/main.go + quote.go",
+  "commit": "af0515f7c94044cec0ff7faab5e7c32bf09ab7bf",
+  "parent": "e1c04f89be61b9af59f6a277539757675b1a60df",
+  "replay_scope": "historical item-count quote formula ported to traced v0.10.4; not full historical tree",
+  "description": "Replace item-count shipping formula with a flat $8.99 fee",
+  "original_sha256": "86aa37448a60559bdf7d7396e3e6cf9d0a533ed9cba27c8d2657ce39c59a20ec",
+  "changed_sha256": "115d8757f4edb240428f7f621141799740c04da200e83bc55282bb84812c3217",
+  "build_context": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R05_flat_shipping_af0515\\source_original",
+  "original_image": "cia-online-boutique-shippingservice:real-af051-original",
+  "override_original": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R05_flat_shipping_af0515\\original.override.yml",
+  "override_changed": null
+}

@@ -1,0 +1,13 @@
+{
+  "case_id": "C03_cart_address",
+  "cohort": "controlled",
+  "change_type": "Configuration",
+  "changed_service": "frontend",
+  "changed_file": "Compose environment",
+  "description": "Misconfigure frontend cart dependency address",
+  "expected_mechanism": "Cart-dependent HTTP paths return errors",
+  "environment": {
+    "CART_SERVICE_ADDR": "productcatalogservice:3550"
+  },
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\C03_cart_address\\compose.override.yml"
+}

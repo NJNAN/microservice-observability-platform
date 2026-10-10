@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: prometheus-config
+data:
+  prometheus.yaml: "global:\n  scrape_interval: 5s\nscrape_configs:\n- job_name: spanmetrics\n\
+    \  static_configs:\n  - targets:\n    - otel-collector:8889\n- job_name: platform\n\
+    \  static_configs:\n  - targets:\n    - platform:8000\n"

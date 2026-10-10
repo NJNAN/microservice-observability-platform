@@ -1,0 +1,2229 @@
+{
+  "id": "20260927T083339-ae93886d",
+  "case_id": "C01_catalog_price",
+  "change_type": "Configuration",
+  "service": "productcatalogservice",
+  "started": 1790498019.1526732,
+  "status": "error",
+  "phases": {
+    "original": {
+      "collected_at": 1790498028.4168217,
+      "query_start_us": 1790498019246930,
+      "query_end_us": 1790498021362852,
+      "workload": {
+        "kind": "system_execution_gate_fixed_workload",
+        "timestamp_utc": "2026-09-27T08:33:40.362637+00:00",
+        "base_url": "http://frontend:80",
+        "seed": 42,
+        "repeats": 1,
+        "interval_s": 0.2,
+        "rows": [
+          {
+            "run_id": 1,
+            "step": "home",
+            "method": "GET",
+            "path": "/",
+            "status": 200,
+            "latency_ms": 52.064,
+            "body_sha256": "d59ea18fef5baecb217e19587a9fe0019dadb9f00cdb0e5fd4069659b0990446",
+            "body_bytes": 10513,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "product",
+            "method": "GET",
+            "path": "/product/OLJCESPC7Z",
+            "status": 200,
+            "latency_ms": 13.965,
+            "body_sha256": "d195b85b5cba774672dfb2115ec632338573f74914d92b2b1abda2d15854d322",
+            "body_bytes": 7987,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "add_cart",
+            "method": "POST",
+            "path": "/cart",
+            "status": 200,
+            "latency_ms": 16.418,
+            "body_sha256": "b05772a68bfdd901108e5dee17ff420bf48c72da4aa23e52e0a733024ffb6a47",
+            "body_bytes": 16461,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "view_cart",
+            "method": "GET",
+            "path": "/cart",
+            "status": 200,
+            "latency_ms": 11.792,
+            "body_sha256": "0445f89712139574040c94fb6e4eadb66fcd7335b0404667d633054b98088b02",
+            "body_bytes": 16489,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "checkout",
+            "method": "POST",
+            "path": "/cart/checkout",
+            "status": 200,
+            "latency_ms": 20.695,
+            "body_sha256": "22ef64eea3ee0f4f0a8baaa6d2e8777c457f0589123a62fd390f7d3a22cd97a0",
+            "body_bytes": 6844,
+            "error": null
+          }
+        ]
+      },
+      "summary": {
+        "raw_trace_count": 12,
+        "raw_span_count": 154,
+        "excluded_telemetry_export_traces": 2,
+        "trace_count": 10,
+        "span_count": 152,
+        "observed_services": [
+          "adservice",
+          "cartservice",
+          "checkoutservice",
+          "currencyservice",
+          "emailservice",
+          "frontend",
+          "paymentservice",
+          "productcatalogservice",
+          "recommendationservice",
+          "shippingservice"
+        ],
+        "missing_services": [],
+        "other_process_services": [],
+        "unique_cross_service_directed_edges": 14,
+        "edges": [
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "call_count": 2,
+            "trace_count": 1,
+            "calls": 2
+          },
+          {
+            "source": "checkoutservice",
+            "target": "currencyservice",
+            "call_count": 2,
+            "trace_count": 1,
+            "calls": 2
+          },
+          {
+            "source": "checkoutservice",
+            "target": "emailservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "paymentservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "productcatalogservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "shippingservice",
+            "call_count": 2,
+            "trace_count": 1,
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "adservice",
+            "call_count": 2,
+            "trace_count": 2,
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "call_count": 5,
+            "trace_count": 5,
+            "calls": 5
+          },
+          {
+            "source": "frontend",
+            "target": "checkoutservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "call_count": 19,
+            "trace_count": 5,
+            "calls": 19
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "call_count": 25,
+            "trace_count": 6,
+            "calls": 25
+          },
+          {
+            "source": "frontend",
+            "target": "recommendationservice",
+            "call_count": 4,
+            "trace_count": 4,
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "shippingservice",
+            "call_count": 2,
+            "trace_count": 2,
+            "calls": 2
+          },
+          {
+            "source": "recommendationservice",
+            "target": "productcatalogservice",
+            "call_count": 4,
+            "trace_count": 4,
+            "calls": 4
+          }
+        ],
+        "server_edges_with_client_parent": 71,
+        "business_grpc_client_span_count": 71,
+        "matched_client_server_span_count": 71,
+        "unmatched_client_span_count": 0,
+        "unmatched_client_spans": [],
+        "broken_parent_reference_count": 0,
+        "broken_parent_references": [],
+        "root_spans_by_service": {
+          "adservice": 1,
+          "frontend": 6,
+          "recommendationservice": 2,
+          "shippingservice": 1
+        },
+        "frontend_to_second_downstream_chains": [
+          {
+            "trace_id": "57db24dbd862c207cd9ca90d780279d6",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "5b7228ea48cf40e4f3dbe0c23f63a5fb",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "currencyservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "emailservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "paymentservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "shippingservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "e5ea2f5dbbb7b3e76244eb3867e2134a",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          }
+        ],
+        "verified_ancestral_service_paths": [
+          {
+            "trace_id": "57db24dbd862c207cd9ca90d780279d6",
+            "leaf_span_id": "635dd2248c87f470",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "5b7228ea48cf40e4f3dbe0c23f63a5fb",
+            "leaf_span_id": "77e9a2312dcc58d5",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "d88d115904429851",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "15232efd0b974ca8",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "shippingservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "415d5055a8bf31f3",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "emailservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "57376b97f74782e6",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "currencyservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "8e86d7e0cd5f70b4",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "paymentservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "0fb1355f86efbefc",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "currencyservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "4433a38bd5a8e814",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "113da6595bbe300d",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "82b6c4226892aad4",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "shippingservice"
+            ]
+          },
+          {
+            "trace_id": "5c7c22b1c73485acb6af1056c0403a95",
+            "leaf_span_id": "5e87e3435e8cfa59",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "e5ea2f5dbbb7b3e76244eb3867e2134a",
+            "leaf_span_id": "27000876e2bd0f47",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          }
+        ],
+        "nodes": [
+          {
+            "id": "adservice"
+          },
+          {
+            "id": "cartservice"
+          },
+          {
+            "id": "checkoutservice"
+          },
+          {
+            "id": "currencyservice"
+          },
+          {
+            "id": "emailservice"
+          },
+          {
+            "id": "frontend"
+          },
+          {
+            "id": "paymentservice"
+          },
+          {
+            "id": "productcatalogservice"
+          },
+          {
+            "id": "recommendationservice"
+          },
+          {
+            "id": "shippingservice"
+          }
+        ],
+        "rpc_calls": [
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/EmptyCart",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/GetCart",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/Convert",
+            "calls": 2
+          },
+          {
+            "source": "checkoutservice",
+            "target": "emailservice",
+            "operation": "/hipstershop.EmailService/SendOrderConfirmation",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "paymentservice",
+            "operation": "grpc.hipstershop.PaymentService/Charge",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/GetProduct",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "shippingservice",
+            "operation": "hipstershop.ShippingService/GetQuote",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "shippingservice",
+            "operation": "hipstershop.ShippingService/ShipOrder",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "adservice",
+            "operation": "hipstershop.AdService/GetAds",
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/AddItem",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/GetCart",
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "checkoutservice",
+            "operation": "hipstershop.CheckoutService/PlaceOrder",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/Convert",
+            "calls": 14
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+            "calls": 5
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/GetProduct",
+            "calls": 24
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/ListProducts",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "recommendationservice",
+            "operation": "/hipstershop.RecommendationService/ListRecommendations",
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "shippingservice",
+            "operation": "hipstershop.ShippingService/GetQuote",
+            "calls": 2
+          },
+          {
+            "source": "recommendationservice",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/ListProducts",
+            "calls": 4
+          }
+        ],
+        "collected_at": 1790498028.4168205,
+        "query_start_us": 1790498019246930,
+        "query_end_us": 1790498021362852
+      },
+      "gate_pass": true,
+      "oracle": {
+        "AdService.GetAds": {
+          "result": {
+            "ads": [
+              {
+                "redirect_url": "/product/1YMWWN1N4O",
+                "text": "Watch for sale. Buy one, get second kit for free"
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "CartService.AddItem": {
+          "result": {},
+          "status": "OK"
+        },
+        "CartService.EmptyCart": {
+          "result": {},
+          "status": "OK"
+        },
+        "CartService.GetCart": {
+          "result": {
+            "items": [
+              {
+                "product_id": "OLJCESPC7Z",
+                "quantity": 1
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "CheckoutService.PlaceOrder": {
+          "result": {
+            "order": {
+              "items": [
+                {
+                  "cost": {
+                    "currency_code": "USD",
+                    "nanos": 990000000,
+                    "units": "19"
+                  },
+                  "item": {
+                    "product_id": "OLJCESPC7Z",
+                    "quantity": 1
+                  }
+                }
+              ],
+              "shipping_address": {
+                "city": "Mountain View",
+                "country": "United States",
+                "state": "CA",
+                "street_address": "1 Experiment Way",
+                "zip_code": 94043
+              },
+              "shipping_cost": {
+                "currency_code": "USD",
+                "nanos": 990000000,
+                "units": "8"
+              }
+            }
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.USD_EUR": {
+          "result": {
+            "currency_code": "EUR",
+            "nanos": 682441398,
+            "units": "17"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.USD_USD": {
+          "result": {
+            "currency_code": "USD",
+            "nanos": 990000000,
+            "units": "19"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.large_USD": {
+          "result": {
+            "currency_code": "USD",
+            "nanos": 990000000,
+            "units": "109"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.small_USD": {
+          "result": {
+            "currency_code": "USD",
+            "nanos": 990000000,
+            "units": "8"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.unknown_target": {
+          "result": {
+            "currency_code": "ZZZ"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.GetSupportedCurrencies": {
+          "result": {
+            "currency_codes": [
+              "EUR",
+              "USD",
+              "JPY",
+              "BGN",
+              "CZK",
+              "DKK",
+              "GBP",
+              "HUF",
+              "PLN",
+              "RON",
+              "SEK",
+              "CHF",
+              "ISK",
+              "NOK",
+              "HRK",
+              "RUB",
+              "TRY",
+              "AUD",
+              "BRL",
+              "CAD",
+              "CNY",
+              "HKD",
+              "IDR",
+              "ILS",
+              "INR",
+              "KRW",
+              "MXN",
+              "MYR",
+              "NZD",
+              "PHP",
+              "SGD",
+              "THB",
+              "ZAR"
+            ]
+          },
+          "status": "OK"
+        },
+        "EmailService.SendOrderConfirmation": {
+          "result": {},
+          "status": "OK"
+        },
+        "EmailService.SendOrderConfirmation.invalid": {
+          "result": {},
+          "status": "OK"
+        },
+        "PaymentService.Charge": {
+          "result": {
+            "transaction_id_present": true
+          },
+          "status": "OK"
+        },
+        "PaymentService.Charge.amex": {
+          "detail": "Server sent unknown code None and details \"Sorry, we cannot process amex credit cards. Only VISA or MasterCard is accepted.\"",
+          "status": "UNKNOWN"
+        },
+        "PaymentService.Charge.expired": {
+          "detail": "Server sent unknown code None and details \"Your credit card (ending 1111) expired on 12/2020\"",
+          "status": "UNKNOWN"
+        },
+        "ProductCatalogService.GetProduct": {
+          "result": {
+            "categories": [
+              "accessories"
+            ],
+            "description": "Add a modern touch to your outfits with these sleek aviator sunglasses.",
+            "id": "OLJCESPC7Z",
+            "name": "Sunglasses",
+            "picture": "/static/img/products/sunglasses.jpg",
+            "price_usd": {
+              "currency_code": "USD",
+              "nanos": 990000000,
+              "units": "19"
+            }
+          },
+          "status": "OK"
+        },
+        "ProductCatalogService.GetProduct.missing": {
+          "detail": "no product with ID DOES-NOT-EXIST",
+          "status": "NOT_FOUND"
+        },
+        "ProductCatalogService.ListProducts": {
+          "result": {
+            "products": [
+              {
+                "categories": [
+                  "accessories"
+                ],
+                "description": "Add a modern touch to your outfits with these sleek aviator sunglasses.",
+                "id": "OLJCESPC7Z",
+                "name": "Sunglasses",
+                "picture": "/static/img/products/sunglasses.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "19"
+                }
+              },
+              {
+                "categories": [
+                  "clothing",
+                  "tops"
+                ],
+                "description": "Perfectly cropped cotton tank, with a scooped neckline.",
+                "id": "66VCHSJNUP",
+                "name": "Tank Top",
+                "picture": "/static/img/products/tank-top.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "18"
+                }
+              },
+              {
+                "categories": [
+                  "accessories"
+                ],
+                "description": "This gold-tone stainless steel watch will work with most of your outfits.",
+                "id": "1YMWWN1N4O",
+                "name": "Watch",
+                "picture": "/static/img/products/watch.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "109"
+                }
+              },
+              {
+                "categories": [
+                  "footwear"
+                ],
+                "description": "A neat addition to your summer wardrobe.",
+                "id": "L9ECAV7KIM",
+                "name": "Loafers",
+                "picture": "/static/img/products/loafers.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "89"
+                }
+              },
+              {
+                "categories": [
+                  "hair",
+                  "beauty"
+                ],
+                "description": "This lightweight hairdryer has 3 heat and speed settings. It's perfect for travel.",
+                "id": "2ZYFJ3GM2N",
+                "name": "Hairdryer",
+                "picture": "/static/img/products/hairdryer.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "24"
+                }
+              },
+              {
+                "categories": [
+                  "decor",
+                  "home"
+                ],
+                "description": "This small but intricate candle holder is an excellent gift.",
+                "id": "0PUK6V6EV0",
+                "name": "Candle Holder",
+                "picture": "/static/img/products/candle-holder.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "18"
+                }
+              },
+              {
+                "categories": [
+                  "kitchen"
+                ],
+                "description": "Add some flavor to your kitchen.",
+                "id": "LS4PSXUNUM",
+                "name": "Salt & Pepper Shakers",
+                "picture": "/static/img/products/salt-and-pepper-shakers.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 490000000,
+                  "units": "18"
+                }
+              },
+              {
+                "categories": [
+                  "kitchen"
+                ],
+                "description": "This bamboo glass jar can hold 57 oz (1.7 l) and is perfect for any kitchen.",
+                "id": "9SIQT8TOJO",
+                "name": "Bamboo Glass Jar",
+                "picture": "/static/img/products/bamboo-glass-jar.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 490000000,
+                  "units": "5"
+                }
+              },
+              {
+                "categories": [
+                  "kitchen"
+                ],
+                "description": "A simple mug with a mustard interior.",
+                "id": "6E92ZMYYFZ",
+                "name": "Mug",
+                "picture": "/static/img/products/mug.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "8"
+                }
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "ProductCatalogService.SearchProducts": {
+          "result": {
+            "results": [
+              {
+                "categories": [
+                  "accessories"
+                ],
+                "description": "Add a modern touch to your outfits with these sleek aviator sunglasses.",
+                "id": "OLJCESPC7Z",
+                "name": "Sunglasses",
+                "picture": "/static/img/products/sunglasses.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "19"
+                }
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "RecommendationService.ListRecommendations": {
+          "result": {
+            "product_ids": [
+              "OLJCESPC7Z"
+            ]
+          },
+          "status": "OK"
+        },
+        "ShippingService.GetQuote": {
+          "result": {
+            "cost_usd": {
+              "currency_code": "USD",
+              "nanos": 990000000,
+              "units": "8"
+            }
+          },
+          "status": "OK"
+        },
+        "ShippingService.ShipOrder": {
+          "result": {
+            "tracking_id_present": true
+          },
+          "status": "OK"
+        }
+      }
+    },
+    "changed": {
+      "collected_at": 1790498054.2624164,
+      "query_start_us": 1790498045094880,
+      "query_end_us": 1790498047208359,
+      "workload": {
+        "kind": "system_execution_gate_fixed_workload",
+        "timestamp_utc": "2026-09-27T08:34:06.208180+00:00",
+        "base_url": "http://frontend:80",
+        "seed": 42,
+        "repeats": 1,
+        "interval_s": 0.2,
+        "rows": [
+          {
+            "run_id": 1,
+            "step": "home",
+            "method": "GET",
+            "path": "/",
+            "status": 200,
+            "latency_ms": 47.488,
+            "body_sha256": "99f09ffb8f28c40a8a17ed33b9b1be13305cb67a178d7c25a43bbd41b3e2ebe1",
+            "body_bytes": 10513,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "product",
+            "method": "GET",
+            "path": "/product/OLJCESPC7Z",
+            "status": 200,
+            "latency_ms": 15.166,
+            "body_sha256": "b190b45b83a48271bf4ab2c747b610c49111149e3672b6f7ee03c88b3a2b9e9f",
+            "body_bytes": 7989,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "add_cart",
+            "method": "POST",
+            "path": "/cart",
+            "status": 200,
+            "latency_ms": 15.658,
+            "body_sha256": "4b88e35285f6d1930680b2840c51f810b71f3974612c2fc297b579045006fae0",
+            "body_bytes": 16473,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "view_cart",
+            "method": "GET",
+            "path": "/cart",
+            "status": 200,
+            "latency_ms": 13.344,
+            "body_sha256": "c95cac5673cd9cc70a6dfce7345f06f95273e3f5e6bb76cce73a68c1516119bd",
+            "body_bytes": 16431,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "checkout",
+            "method": "POST",
+            "path": "/cart/checkout",
+            "status": 200,
+            "latency_ms": 20.674,
+            "body_sha256": "aafc45ac8aae9282b5b02382ed0bf30e7e52928b560c50b1890263bb0cdbf988",
+            "body_bytes": 6844,
+            "error": null
+          }
+        ]
+      },
+      "summary": {
+        "raw_trace_count": 10,
+        "raw_span_count": 152,
+        "excluded_telemetry_export_traces": 2,
+        "trace_count": 8,
+        "span_count": 150,
+        "observed_services": [
+          "adservice",
+          "cartservice",
+          "checkoutservice",
+          "currencyservice",
+          "emailservice",
+          "frontend",
+          "paymentservice",
+          "productcatalogservice",
+          "recommendationservice",
+          "shippingservice"
+        ],
+        "missing_services": [],
+        "other_process_services": [],
+        "unique_cross_service_directed_edges": 14,
+        "edges": [
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "call_count": 2,
+            "trace_count": 1,
+            "calls": 2
+          },
+          {
+            "source": "checkoutservice",
+            "target": "currencyservice",
+            "call_count": 2,
+            "trace_count": 1,
+            "calls": 2
+          },
+          {
+            "source": "checkoutservice",
+            "target": "emailservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "paymentservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "productcatalogservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "shippingservice",
+            "call_count": 2,
+            "trace_count": 1,
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "adservice",
+            "call_count": 2,
+            "trace_count": 2,
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "call_count": 5,
+            "trace_count": 5,
+            "calls": 5
+          },
+          {
+            "source": "frontend",
+            "target": "checkoutservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "call_count": 19,
+            "trace_count": 5,
+            "calls": 19
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "call_count": 25,
+            "trace_count": 6,
+            "calls": 25
+          },
+          {
+            "source": "frontend",
+            "target": "recommendationservice",
+            "call_count": 4,
+            "trace_count": 4,
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "shippingservice",
+            "call_count": 2,
+            "trace_count": 2,
+            "calls": 2
+          },
+          {
+            "source": "recommendationservice",
+            "target": "productcatalogservice",
+            "call_count": 4,
+            "trace_count": 4,
+            "calls": 4
+          }
+        ],
+        "server_edges_with_client_parent": 71,
+        "business_grpc_client_span_count": 71,
+        "matched_client_server_span_count": 71,
+        "unmatched_client_span_count": 0,
+        "unmatched_client_spans": [],
+        "broken_parent_reference_count": 0,
+        "broken_parent_references": [],
+        "root_spans_by_service": {
+          "checkoutservice": 1,
+          "frontend": 6,
+          "shippingservice": 1
+        },
+        "frontend_to_second_downstream_chains": [
+          {
+            "trace_id": "3956eef9018de759652dadb9035754be",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "a4b39275dfe90145faff8744840c8e07",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "currencyservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "emailservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "paymentservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "shippingservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "d45a40c1a2c04a7a7acdda678f78c4d6",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          }
+        ],
+        "verified_ancestral_service_paths": [
+          {
+            "trace_id": "3956eef9018de759652dadb9035754be",
+            "leaf_span_id": "29a03fe95a2bce37",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "a4b39275dfe90145faff8744840c8e07",
+            "leaf_span_id": "86a7503c9bca9710",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "f296b57100c84c80",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "5c75e419a9149205",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "747a679131308f42",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "e4f041a4afd67e61",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "3b9684b3748ae576",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "shippingservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "d504ae34ba74940e",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "shippingservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "bbd9f464a1b2aeea",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "currencyservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "3ef82185b9f81304",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "paymentservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "e6ba35946f4be221",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "currencyservice"
+            ]
+          },
+          {
+            "trace_id": "aff103d211b2ea7985f2837ea6d507de",
+            "leaf_span_id": "e6d1a39127608166",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "emailservice"
+            ]
+          },
+          {
+            "trace_id": "d45a40c1a2c04a7a7acdda678f78c4d6",
+            "leaf_span_id": "c3658d56dc970292",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          }
+        ],
+        "nodes": [
+          {
+            "id": "adservice"
+          },
+          {
+            "id": "cartservice"
+          },
+          {
+            "id": "checkoutservice"
+          },
+          {
+            "id": "currencyservice"
+          },
+          {
+            "id": "emailservice"
+          },
+          {
+            "id": "frontend"
+          },
+          {
+            "id": "paymentservice"
+          },
+          {
+            "id": "productcatalogservice"
+          },
+          {
+            "id": "recommendationservice"
+          },
+          {
+            "id": "shippingservice"
+          }
+        ],
+        "rpc_calls": [
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/EmptyCart",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/GetCart",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/Convert",
+            "calls": 2
+          },
+          {
+            "source": "checkoutservice",
+            "target": "emailservice",
+            "operation": "/hipstershop.EmailService/SendOrderConfirmation",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "paymentservice",
+            "operation": "grpc.hipstershop.PaymentService/Charge",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/GetProduct",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "shippingservice",
+            "operation": "hipstershop.ShippingService/GetQuote",
+            "calls": 1
+          },
+          {
+            "source": "checkoutservice",
+            "target": "shippingservice",
+            "operation": "hipstershop.ShippingService/ShipOrder",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "adservice",
+            "operation": "hipstershop.AdService/GetAds",
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/AddItem",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/GetCart",
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "checkoutservice",
+            "operation": "hipstershop.CheckoutService/PlaceOrder",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/Convert",
+            "calls": 14
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+            "calls": 5
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/GetProduct",
+            "calls": 24
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/ListProducts",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "recommendationservice",
+            "operation": "/hipstershop.RecommendationService/ListRecommendations",
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "shippingservice",
+            "operation": "hipstershop.ShippingService/GetQuote",
+            "calls": 2
+          },
+          {
+            "source": "recommendationservice",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/ListProducts",
+            "calls": 4
+          }
+        ],
+        "collected_at": 1790498054.262415,
+        "query_start_us": 1790498045094880,
+        "query_end_us": 1790498047208359
+      },
+      "gate_pass": true,
+      "oracle": {
+        "AdService.GetAds": {
+          "result": {
+            "ads": [
+              {
+                "redirect_url": "/product/1YMWWN1N4O",
+                "text": "Watch for sale. Buy one, get second kit for free"
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "CartService.AddItem": {
+          "result": {},
+          "status": "OK"
+        },
+        "CartService.EmptyCart": {
+          "result": {},
+          "status": "OK"
+        },
+        "CartService.GetCart": {
+          "result": {
+            "items": [
+              {
+                "product_id": "OLJCESPC7Z",
+                "quantity": 1
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "CheckoutService.PlaceOrder": {
+          "result": {
+            "order": {
+              "items": [
+                {
+                  "cost": {
+                    "currency_code": "USD",
+                    "nanos": 990000000,
+                    "units": "24"
+                  },
+                  "item": {
+                    "product_id": "OLJCESPC7Z",
+                    "quantity": 1
+                  }
+                }
+              ],
+              "shipping_address": {
+                "city": "Mountain View",
+                "country": "United States",
+                "state": "CA",
+                "street_address": "1 Experiment Way",
+                "zip_code": 94043
+              },
+              "shipping_cost": {
+                "currency_code": "USD",
+                "nanos": 990000000,
+                "units": "8"
+              }
+            }
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.USD_EUR": {
+          "result": {
+            "currency_code": "EUR",
+            "nanos": 682441398,
+            "units": "17"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.USD_USD": {
+          "result": {
+            "currency_code": "USD",
+            "nanos": 990000000,
+            "units": "19"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.large_USD": {
+          "result": {
+            "currency_code": "USD",
+            "nanos": 990000000,
+            "units": "109"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.small_USD": {
+          "result": {
+            "currency_code": "USD",
+            "nanos": 990000000,
+            "units": "8"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.Convert.unknown_target": {
+          "result": {
+            "currency_code": "ZZZ"
+          },
+          "status": "OK"
+        },
+        "CurrencyService.GetSupportedCurrencies": {
+          "result": {
+            "currency_codes": [
+              "EUR",
+              "USD",
+              "JPY",
+              "BGN",
+              "CZK",
+              "DKK",
+              "GBP",
+              "HUF",
+              "PLN",
+              "RON",
+              "SEK",
+              "CHF",
+              "ISK",
+              "NOK",
+              "HRK",
+              "RUB",
+              "TRY",
+              "AUD",
+              "BRL",
+              "CAD",
+              "CNY",
+              "HKD",
+              "IDR",
+              "ILS",
+              "INR",
+              "KRW",
+              "MXN",
+              "MYR",
+              "NZD",
+              "PHP",
+              "SGD",
+              "THB",
+              "ZAR"
+            ]
+          },
+          "status": "OK"
+        },
+        "EmailService.SendOrderConfirmation": {
+          "result": {},
+          "status": "OK"
+        },
+        "EmailService.SendOrderConfirmation.invalid": {
+          "result": {},
+          "status": "OK"
+        },
+        "PaymentService.Charge": {
+          "result": {
+            "transaction_id_present": true
+          },
+          "status": "OK"
+        },
+        "PaymentService.Charge.amex": {
+          "detail": "Server sent unknown code None and details \"Sorry, we cannot process amex credit cards. Only VISA or MasterCard is accepted.\"",
+          "status": "UNKNOWN"
+        },
+        "PaymentService.Charge.expired": {
+          "detail": "Server sent unknown code None and details \"Your credit card (ending 1111) expired on 12/2020\"",
+          "status": "UNKNOWN"
+        },
+        "ProductCatalogService.GetProduct": {
+          "result": {
+            "categories": [
+              "accessories"
+            ],
+            "description": "Add a modern touch to your outfits with these sleek aviator sunglasses.",
+            "id": "OLJCESPC7Z",
+            "name": "Sunglasses",
+            "picture": "/static/img/products/sunglasses.jpg",
+            "price_usd": {
+              "currency_code": "USD",
+              "nanos": 990000000,
+              "units": "24"
+            }
+          },
+          "status": "OK"
+        },
+        "ProductCatalogService.GetProduct.missing": {
+          "detail": "no product with ID DOES-NOT-EXIST",
+          "status": "NOT_FOUND"
+        },
+        "ProductCatalogService.ListProducts": {
+          "result": {
+            "products": [
+              {
+                "categories": [
+                  "accessories"
+                ],
+                "description": "Add a modern touch to your outfits with these sleek aviator sunglasses.",
+                "id": "OLJCESPC7Z",
+                "name": "Sunglasses",
+                "picture": "/static/img/products/sunglasses.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "24"
+                }
+              },
+              {
+                "categories": [
+                  "clothing",
+                  "tops"
+                ],
+                "description": "Perfectly cropped cotton tank, with a scooped neckline.",
+                "id": "66VCHSJNUP",
+                "name": "Tank Top",
+                "picture": "/static/img/products/tank-top.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "18"
+                }
+              },
+              {
+                "categories": [
+                  "accessories"
+                ],
+                "description": "This gold-tone stainless steel watch will work with most of your outfits.",
+                "id": "1YMWWN1N4O",
+                "name": "Watch",
+                "picture": "/static/img/products/watch.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "109"
+                }
+              },
+              {
+                "categories": [
+                  "footwear"
+                ],
+                "description": "A neat addition to your summer wardrobe.",
+                "id": "L9ECAV7KIM",
+                "name": "Loafers",
+                "picture": "/static/img/products/loafers.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "89"
+                }
+              },
+              {
+                "categories": [
+                  "hair",
+                  "beauty"
+                ],
+                "description": "This lightweight hairdryer has 3 heat and speed settings. It's perfect for travel.",
+                "id": "2ZYFJ3GM2N",
+                "name": "Hairdryer",
+                "picture": "/static/img/products/hairdryer.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "24"
+                }
+              },
+              {
+                "categories": [
+                  "decor",
+                  "home"
+                ],
+                "description": "This small but intricate candle holder is an excellent gift.",
+                "id": "0PUK6V6EV0",
+                "name": "Candle Holder",
+                "picture": "/static/img/products/candle-holder.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "18"
+                }
+              },
+              {
+                "categories": [
+                  "kitchen"
+                ],
+                "description": "Add some flavor to your kitchen.",
+                "id": "LS4PSXUNUM",
+                "name": "Salt & Pepper Shakers",
+                "picture": "/static/img/products/salt-and-pepper-shakers.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 490000000,
+                  "units": "18"
+                }
+              },
+              {
+                "categories": [
+                  "kitchen"
+                ],
+                "description": "This bamboo glass jar can hold 57 oz (1.7 l) and is perfect for any kitchen.",
+                "id": "9SIQT8TOJO",
+                "name": "Bamboo Glass Jar",
+                "picture": "/static/img/products/bamboo-glass-jar.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 490000000,
+                  "units": "5"
+                }
+              },
+              {
+                "categories": [
+                  "kitchen"
+                ],
+                "description": "A simple mug with a mustard interior.",
+                "id": "6E92ZMYYFZ",
+                "name": "Mug",
+                "picture": "/static/img/products/mug.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "8"
+                }
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "ProductCatalogService.SearchProducts": {
+          "result": {
+            "results": [
+              {
+                "categories": [
+                  "accessories"
+                ],
+                "description": "Add a modern touch to your outfits with these sleek aviator sunglasses.",
+                "id": "OLJCESPC7Z",
+                "name": "Sunglasses",
+                "picture": "/static/img/products/sunglasses.jpg",
+                "price_usd": {
+                  "currency_code": "USD",
+                  "nanos": 990000000,
+                  "units": "24"
+                }
+              }
+            ]
+          },
+          "status": "OK"
+        },
+        "RecommendationService.ListRecommendations": {
+          "result": {
+            "product_ids": [
+              "OLJCESPC7Z"
+            ]
+          },
+          "status": "OK"
+        },
+        "ShippingService.GetQuote": {
+          "result": {
+            "cost_usd": {
+              "currency_code": "USD",
+              "nanos": 990000000,
+              "units": "8"
+            }
+          },
+          "status": "OK"
+        },
+        "ShippingService.ShipOrder": {
+          "result": {
+            "tracking_id_present": true
+          },
+          "status": "OK"
+        }
+      }
+    },
+    "restored": {
+      "collected_at": 1790498100.3312573,
+      "query_start_us": 1790498071174596,
+      "query_end_us": 1790498093280819,
+      "workload": {
+        "kind": "system_execution_gate_fixed_workload",
+        "timestamp_utc": "2026-09-27T08:34:52.280644+00:00",
+        "base_url": "http://frontend:80",
+        "seed": 42,
+        "repeats": 1,
+        "interval_s": 0.2,
+        "rows": [
+          {
+            "run_id": 1,
+            "step": "home",
+            "method": "GET",
+            "path": "/",
+            "status": 200,
+            "latency_ms": 53.845,
+            "body_sha256": "0716441340b40d5677b87e7a51662d65f694e31d28034dc06c73bcec003b6758",
+            "body_bytes": 10513,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "product",
+            "method": "GET",
+            "path": "/product/OLJCESPC7Z",
+            "status": 200,
+            "latency_ms": 15.87,
+            "body_sha256": "88f7602ede7c3edcbbce4a65d0cdefb9aa62d20186156f15cc3de12eb3c76e3b",
+            "body_bytes": 7993,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "add_cart",
+            "method": "POST",
+            "path": "/cart",
+            "status": 200,
+            "latency_ms": 17.293,
+            "body_sha256": "3dc87e236dbb7dc6910c3d7a372dcf1762348841423604f6a856ee8211209d0a",
+            "body_bytes": 16483,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "view_cart",
+            "method": "GET",
+            "path": "/cart",
+            "status": 200,
+            "latency_ms": 12.429,
+            "body_sha256": "88f1dc6c61776f417b6c0515770fa788ee6084e4625a2c887bf9306ce0995a08",
+            "body_bytes": 16455,
+            "error": null
+          },
+          {
+            "run_id": 1,
+            "step": "checkout",
+            "method": "POST",
+            "path": "/cart/checkout",
+            "status": 500,
+            "latency_ms": 20005.704,
+            "body_sha256": "efc2ca21fbe50d83d9aeeae4dfaa22e248745bb545b1f6b1a79aa695ed4195a3",
+            "body_bytes": 5063,
+            "error": null
+          }
+        ]
+      },
+      "summary": {
+        "raw_trace_count": 58,
+        "raw_span_count": 169,
+        "excluded_telemetry_export_traces": 12,
+        "trace_count": 46,
+        "span_count": 157,
+        "observed_services": [
+          "adservice",
+          "cartservice",
+          "checkoutservice",
+          "currencyservice",
+          "frontend",
+          "paymentservice",
+          "productcatalogservice",
+          "recommendationservice",
+          "shippingservice"
+        ],
+        "missing_services": [
+          "emailservice"
+        ],
+        "other_process_services": [],
+        "unique_cross_service_directed_edges": 9,
+        "edges": [
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "adservice",
+            "call_count": 2,
+            "trace_count": 2,
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "call_count": 5,
+            "trace_count": 5,
+            "calls": 5
+          },
+          {
+            "source": "frontend",
+            "target": "checkoutservice",
+            "call_count": 1,
+            "trace_count": 1,
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "call_count": 18,
+            "trace_count": 4,
+            "calls": 18
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "call_count": 20,
+            "trace_count": 5,
+            "calls": 20
+          },
+          {
+            "source": "frontend",
+            "target": "recommendationservice",
+            "call_count": 3,
+            "trace_count": 3,
+            "calls": 3
+          },
+          {
+            "source": "frontend",
+            "target": "shippingservice",
+            "call_count": 2,
+            "trace_count": 2,
+            "calls": 2
+          },
+          {
+            "source": "recommendationservice",
+            "target": "productcatalogservice",
+            "call_count": 3,
+            "trace_count": 3,
+            "calls": 3
+          }
+        ],
+        "server_edges_with_client_parent": 55,
+        "business_grpc_client_span_count": 56,
+        "matched_client_server_span_count": 55,
+        "unmatched_client_span_count": 1,
+        "unmatched_client_spans": [
+          {
+            "trace_id": "767fd8a68b36e03af7f6981693e1812d",
+            "service": "checkoutservice",
+            "operation": "hipstershop.ProductCatalogService/GetProduct",
+            "span_id": "a4544c251b3b283d"
+          }
+        ],
+        "broken_parent_reference_count": 0,
+        "broken_parent_references": [],
+        "root_spans_by_service": {
+          "adservice": 2,
+          "cartservice": 4,
+          "checkoutservice": 4,
+          "currencyservice": 4,
+          "frontend": 10,
+          "paymentservice": 4,
+          "productcatalogservice": 4,
+          "recommendationservice": 8,
+          "shippingservice": 6
+        },
+        "frontend_to_second_downstream_chains": [
+          {
+            "trace_id": "404f569d39b6efa094b79ac779dcf585",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "6164bdb46e63ed5fbab8f3c276cf5a66",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "767fd8a68b36e03af7f6981693e1812d",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "a2a43afa3db8ddbb1f47bb9c5205b03d",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          }
+        ],
+        "verified_ancestral_service_paths": [
+          {
+            "trace_id": "404f569d39b6efa094b79ac779dcf585",
+            "leaf_span_id": "09c2cd004f06682b",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "6164bdb46e63ed5fbab8f3c276cf5a66",
+            "leaf_span_id": "2aaf23b435ef4280",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          },
+          {
+            "trace_id": "767fd8a68b36e03af7f6981693e1812d",
+            "leaf_span_id": "d8ec3f9080bf9d57",
+            "services": [
+              "frontend",
+              "checkoutservice",
+              "cartservice"
+            ]
+          },
+          {
+            "trace_id": "a2a43afa3db8ddbb1f47bb9c5205b03d",
+            "leaf_span_id": "1db9b7f25336c503",
+            "services": [
+              "frontend",
+              "recommendationservice",
+              "productcatalogservice"
+            ]
+          }
+        ],
+        "nodes": [
+          {
+            "id": "adservice"
+          },
+          {
+            "id": "cartservice"
+          },
+          {
+            "id": "checkoutservice"
+          },
+          {
+            "id": "currencyservice"
+          },
+          {
+            "id": "frontend"
+          },
+          {
+            "id": "paymentservice"
+          },
+          {
+            "id": "productcatalogservice"
+          },
+          {
+            "id": "recommendationservice"
+          },
+          {
+            "id": "shippingservice"
+          }
+        ],
+        "rpc_calls": [
+          {
+            "source": "checkoutservice",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/GetCart",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "adservice",
+            "operation": "hipstershop.AdService/GetAds",
+            "calls": 2
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/AddItem",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "cartservice",
+            "operation": "hipstershop.CartService/GetCart",
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "checkoutservice",
+            "operation": "hipstershop.CheckoutService/PlaceOrder",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/Convert",
+            "calls": 14
+          },
+          {
+            "source": "frontend",
+            "target": "currencyservice",
+            "operation": "grpc.hipstershop.CurrencyService/GetSupportedCurrencies",
+            "calls": 4
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/GetProduct",
+            "calls": 19
+          },
+          {
+            "source": "frontend",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/ListProducts",
+            "calls": 1
+          },
+          {
+            "source": "frontend",
+            "target": "recommendationservice",
+            "operation": "/hipstershop.RecommendationService/ListRecommendations",
+            "calls": 3
+          },
+          {
+            "source": "frontend",
+            "target": "shippingservice",
+            "operation": "hipstershop.ShippingService/GetQuote",
+            "calls": 2
+          },
+          {
+            "source": "recommendationservice",
+            "target": "productcatalogservice",
+            "operation": "hipstershop.ProductCatalogService/ListProducts",
+            "calls": 3
+          }
+        ],
+        "collected_at": 1790498100.3312473,
+        "query_start_us": 1790498071174596,
+        "query_end_us": 1790498093280819
+      },
+      "gate_pass": false
+    }
+  },
+  "changed_oracle_keys": [
+    "CheckoutService.PlaceOrder",
+    "ProductCatalogService.GetProduct",
+    "ProductCatalogService.ListProducts",
+    "ProductCatalogService.SearchProducts"
+  ],
+  "restored": true,
+  "baseline_gate_pass": false,
+  "error": "Restored workload/trace gate failed",
+  "finished": 1790498100.3348746
+}

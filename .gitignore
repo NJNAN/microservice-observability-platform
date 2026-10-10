@@ -1,0 +1,15 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.ruff_cache/
+node_modules/
+tools/*.exe
+.runtime/
+.runtime-*
+dist/
+data/runs/
+*.kubeconfig
+.env
+# Keep all original experiment evidence; exclude only generated build caches.
+cia_preexperiment_v2/build/

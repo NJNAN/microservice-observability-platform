@@ -1,0 +1,15 @@
+{
+  "case_id": "R03_nanos_rounding_076819",
+  "cohort": "real_commit_replay",
+  "change_type": "Real currency commit",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "commit": "076819d009e9ca5fc161306c15c6b78d63d4abda",
+  "parent": "6f10ac979447ee2c66226a3e5da286f982bb6592",
+  "replay_scope": "historical conversion-function hunk ported to traced v0.10.4; not full historical tree",
+  "description": "Fix nano-unit overflow in conversion rounding",
+  "original_sha256": "c94e1495940735858e9935fd83a08e2bfa45cc2db9865265c09248713bd3b408",
+  "changed_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "override_original": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R03_nanos_rounding_076819\\original.override.yml",
+  "override_changed": null
+}

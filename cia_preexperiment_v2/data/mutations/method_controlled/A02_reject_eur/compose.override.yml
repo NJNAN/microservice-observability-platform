@@ -1,0 +1,4 @@
+services:
+  currencyservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/A02_reject_eur/server.js:/usr/src/app/server.js:ro

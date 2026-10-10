@@ -1,0 +1,12 @@
+{
+  "case_id": "D04_single_product",
+  "cohort": "controlled",
+  "change_type": "Dependency",
+  "changed_service": "recommendationservice",
+  "changed_file": "src/recommendationservice/recommendation_server.py",
+  "description": "Use GetProduct for a featured product instead of ListProducts",
+  "expected_mechanism": "Catalog API dependency and recommendation output change",
+  "original_sha256": "4d777f010e019de588138239272e272f2ea54b8536aa0b34fb5faf76739d343c",
+  "changed_sha256": "6eb48ee9a26ac0083bb6d7768c0d40e7e2ba428f371ce627f84204f272719946",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\D04_single_product\\compose.override.yml"
+}

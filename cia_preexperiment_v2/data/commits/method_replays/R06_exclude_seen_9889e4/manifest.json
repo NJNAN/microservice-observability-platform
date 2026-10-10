@@ -1,0 +1,15 @@
+{
+  "case_id": "R06_exclude_seen_9889e4",
+  "cohort": "real_commit_replay",
+  "change_type": "Real recommendation commit",
+  "changed_service": "recommendationservice",
+  "changed_file": "src/recommendationservice/recommendation_server.py",
+  "commit": "9889e4904d3a523515480a7d66fc40e5f23bed83",
+  "parent": "2041bdcb48f0d607cfc9a5820ad351140aaa5df6",
+  "replay_scope": "historical exclude-seen hunk ported to traced v0.10.4; not full historical tree",
+  "description": "Exclude products already provided in recommendation request",
+  "original_sha256": "4faabfe7bd8074c1c8154a475e8d2754c5a4256926f9bc59ff94730a736cd2d3",
+  "changed_sha256": "4d777f010e019de588138239272e272f2ea54b8536aa0b34fb5faf76739d343c",
+  "override_original": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R06_exclude_seen_9889e4\\original.override.yml",
+  "override_changed": null
+}

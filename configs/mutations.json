@@ -1,0 +1,232 @@
+[
+  {
+    "case_id": "L01_spread_05",
+    "change_type": "Logic",
+    "changed_service": "currencyservice",
+    "description": "Apply 5% destination-currency spread",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/L01_spread_05/compose.override.yml"
+  },
+  {
+    "case_id": "L02_whole_units",
+    "change_type": "Logic",
+    "changed_service": "currencyservice",
+    "description": "Round converted prices down to whole currency units",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/L02_whole_units/compose.override.yml"
+  },
+  {
+    "case_id": "L03_minimum_10",
+    "change_type": "Logic",
+    "changed_service": "currencyservice",
+    "description": "Introduce a minimum converted amount of 10 units",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/L03_minimum_10/compose.override.yml"
+  },
+  {
+    "case_id": "L04_cap_50",
+    "change_type": "Logic",
+    "changed_service": "currencyservice",
+    "description": "Cap converted amounts at 50 units",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/L04_cap_50/compose.override.yml"
+  },
+  {
+    "case_id": "A01_drop_jpy",
+    "change_type": "API",
+    "changed_service": "currencyservice",
+    "description": "Withdraw JPY from advertised currencies",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/A01_drop_jpy/compose.override.yml"
+  },
+  {
+    "case_id": "A02_reject_eur",
+    "change_type": "API",
+    "changed_service": "currencyservice",
+    "description": "Reject EUR as conversion target",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/A02_reject_eur/compose.override.yml"
+  },
+  {
+    "case_id": "A03_accept_amex",
+    "change_type": "API",
+    "changed_service": "paymentservice",
+    "description": "Accept AMEX cards in addition to Visa and MasterCard",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/A03_accept_amex/compose.override.yml"
+  },
+  {
+    "case_id": "A04_validate_email",
+    "change_type": "API",
+    "changed_service": "emailservice",
+    "description": "Validate recipient format in dummy email API",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/A04_validate_email/compose.override.yml"
+  },
+  {
+    "case_id": "D01_local_cache",
+    "change_type": "Dependency",
+    "changed_service": "recommendationservice",
+    "description": "Use a stale local catalog snapshot instead of catalog RPC",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/D01_local_cache/compose.override.yml"
+  },
+  {
+    "case_id": "D02_search_mug",
+    "change_type": "Dependency",
+    "changed_service": "recommendationservice",
+    "description": "Select candidates from catalog SearchProducts for mugs",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/D02_search_mug/compose.override.yml"
+  },
+  {
+    "case_id": "D03_search_watch",
+    "change_type": "Dependency",
+    "changed_service": "recommendationservice",
+    "description": "Select candidates from catalog SearchProducts for watches",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/D03_search_watch/compose.override.yml"
+  },
+  {
+    "case_id": "D04_single_product",
+    "change_type": "Dependency",
+    "changed_service": "recommendationservice",
+    "description": "Use GetProduct for a featured product instead of ListProducts",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/D04_single_product/compose.override.yml"
+  },
+  {
+    "case_id": "C01_catalog_price",
+    "change_type": "Configuration",
+    "changed_service": "productcatalogservice",
+    "description": "Raise sunglasses catalog price from $19.99 to $24.99",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/C01_catalog_price/compose.override.yml"
+  },
+  {
+    "case_id": "C02_exchange_rate",
+    "change_type": "Configuration",
+    "changed_service": "currencyservice",
+    "description": "Update USD exchange-rate data from 1.1305 to 1.2000",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/C02_exchange_rate/compose.override.yml"
+  },
+  {
+    "case_id": "C03_cart_address",
+    "change_type": "Configuration",
+    "changed_service": "frontend",
+    "description": "Misconfigure frontend cart dependency address",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/C03_cart_address/compose.override.yml"
+  },
+  {
+    "case_id": "F01_payment_limit",
+    "change_type": "Failure/Fallback",
+    "changed_service": "paymentservice",
+    "description": "Reject charges of at least 19 currency units",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/F01_payment_limit/compose.override.yml"
+  },
+  {
+    "case_id": "F02_unknown_currency_fallback",
+    "change_type": "Failure/Fallback",
+    "changed_service": "currencyservice",
+    "description": "Fall back to USD for unknown destination currencies",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/F02_unknown_currency_fallback/compose.override.yml"
+  },
+  {
+    "case_id": "F03_block_test_mail",
+    "change_type": "Failure/Fallback",
+    "changed_service": "emailservice",
+    "description": "Block delivery to .test recipients",
+    "cohort": "controlled",
+    "replay_scope": null,
+    "original": null,
+    "changed": "cia_preexperiment_v2/data/mutations/method_controlled/F03_block_test_mail/compose.override.yml"
+  },
+  {
+    "case_id": "R01_catalog_refresh_d2c729",
+    "change_type": "Real catalog commit",
+    "changed_service": "productcatalogservice",
+    "description": "Replace vintage catalog with Cymbal product list",
+    "cohort": "replay",
+    "replay_scope": "exact products.json blobs; other historical commit files are not replayed",
+    "original": "cia_preexperiment_v2/data/commits/method_replays/R01_catalog_refresh_d2c729/original.override.yml",
+    "changed": "cia_preexperiment_v2/data/commits/method_replays/R01_catalog_refresh_d2c729/changed.override.yml"
+  },
+  {
+    "case_id": "R02_camera_name_9b4e81",
+    "change_type": "Real catalog commit",
+    "changed_service": "productcatalogservice",
+    "description": "Rename Vintage Camera Lens to Antique Camera",
+    "cohort": "replay",
+    "replay_scope": "exact products.json blobs; other historical commit files are not replayed",
+    "original": "cia_preexperiment_v2/data/commits/method_replays/R02_camera_name_9b4e81/original.override.yml",
+    "changed": "cia_preexperiment_v2/data/commits/method_replays/R02_camera_name_9b4e81/changed.override.yml"
+  },
+  {
+    "case_id": "R04_carry_math_97a36a",
+    "change_type": "Real currency commit",
+    "changed_service": "currencyservice",
+    "description": "Fix double-counting of fractional units in carry arithmetic",
+    "cohort": "replay",
+    "replay_scope": "historical conversion-function hunk ported to traced v0.10.4; not full historical tree",
+    "original": "cia_preexperiment_v2/data/commits/method_replays/R04_carry_math_97a36a/original.override.yml",
+    "changed": null
+  },
+  {
+    "case_id": "R05_flat_shipping_af0515",
+    "change_type": "Real shipping commit",
+    "changed_service": "shippingservice",
+    "description": "Replace item-count shipping formula with a flat $8.99 fee",
+    "cohort": "replay",
+    "replay_scope": "historical item-count quote formula ported to traced v0.10.4; not full historical tree",
+    "original": "cia_preexperiment_v2/data/commits/method_replays/R05_flat_shipping_af0515/original.override.yml",
+    "changed": null
+  },
+  {
+    "case_id": "R06_exclude_seen_9889e4",
+    "change_type": "Real recommendation commit",
+    "changed_service": "recommendationservice",
+    "description": "Exclude products already provided in recommendation request",
+    "cohort": "replay",
+    "replay_scope": "historical exclude-seen hunk ported to traced v0.10.4; not full historical tree",
+    "original": "cia_preexperiment_v2/data/commits/method_replays/R06_exclude_seen_9889e4/original.override.yml",
+    "changed": null
+  }
+]

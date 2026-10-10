@@ -1,0 +1,15 @@
+{
+  "case_id": "R02_camera_name_9b4e81",
+  "cohort": "real_commit_replay",
+  "change_type": "Real catalog commit",
+  "changed_service": "productcatalogservice",
+  "changed_file": "src/productcatalogservice/products.json",
+  "commit": "9b4e81ef4830d100deaf1b541eaf091cc440e8e4",
+  "parent": "727987ed391964ffc3ccc70c5c1fcd7e7fc6c2de",
+  "replay_scope": "exact products.json blobs; other historical commit files are not replayed",
+  "description": "Rename Vintage Camera Lens to Antique Camera",
+  "original_sha256": "4fd0507df54039f5f1a5117f3ecdbac5a2865e7ce4235a6237865af807383813",
+  "changed_sha256": "6397274e3a8eaacd8fe466507ed34040f4e1b434cb42f0295e88890d6051ca31",
+  "override_original": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R02_camera_name_9b4e81\\original.override.yml",
+  "override_changed": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R02_camera_name_9b4e81\\changed.override.yml"
+}

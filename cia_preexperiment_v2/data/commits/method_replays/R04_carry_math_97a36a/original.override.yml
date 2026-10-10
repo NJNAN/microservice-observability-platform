@@ -1,0 +1,4 @@
+services:
+  currencyservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/commits/method_replays/R04_carry_math_97a36a/server_original.js:/usr/src/app/server.js:ro

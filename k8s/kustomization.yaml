@@ -1,0 +1,6 @@
+namespace: mop
+resources:
+- namespace.yaml
+- application
+- observability
+- platform

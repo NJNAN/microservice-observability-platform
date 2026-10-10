@@ -1,0 +1,4 @@
+services:
+  currencyservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/C02_exchange_rate/currency_conversion.json:/usr/src/app/data/currency_conversion.json:ro

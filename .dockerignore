@@ -1,0 +1,16 @@
+**/.git
+**/node_modules
+.venv
+.runtime
+tools
+dist
+.runtime-*
+**/__pycache__
+**/.pytest_cache
+**/.ruff_cache
+cia_preexperiment
+preexperiment
+preexperiment_v2
+cia_preexperiment_v2/build
+cia_preexperiment_v2/data/sock-shop
+cia_preexperiment_v2/data/teastore

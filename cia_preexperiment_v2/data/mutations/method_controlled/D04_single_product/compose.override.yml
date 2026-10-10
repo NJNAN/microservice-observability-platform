@@ -1,0 +1,4 @@
+services:
+  recommendationservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/D04_single_product/recommendation_server.py:/recommendationservice/recommendation_server.py:ro

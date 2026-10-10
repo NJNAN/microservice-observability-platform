@@ -1,0 +1,12 @@
+{
+  "case_id": "L01_spread_05",
+  "cohort": "controlled",
+  "change_type": "Logic",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "description": "Apply 5% destination-currency spread",
+  "expected_mechanism": "Converted prices and checkout costs increase",
+  "original_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "changed_sha256": "72a46af7e33804edc9fa940d945da6516e25869c0b94d1b02e5a6ae42447d28b",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\L01_spread_05\\compose.override.yml"
+}

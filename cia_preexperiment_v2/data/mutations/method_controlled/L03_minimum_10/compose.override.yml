@@ -1,0 +1,4 @@
+services:
+  currencyservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/L03_minimum_10/server.js:/usr/src/app/server.js:ro

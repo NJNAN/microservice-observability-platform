@@ -1,0 +1,4 @@
+services:
+  recommendationservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/commits/method_replays/R06_exclude_seen_9889e4/recommendation_original.py:/recommendationservice/recommendation_server.py:ro

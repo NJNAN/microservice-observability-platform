@@ -1,0 +1,4 @@
+services:
+  frontend:
+    environment:
+      CART_SERVICE_ADDR: 'productcatalogservice:3550'

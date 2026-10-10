@@ -1,0 +1,12 @@
+{
+  "case_id": "F02_unknown_currency_fallback",
+  "cohort": "controlled",
+  "change_type": "Failure/Fallback",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "description": "Fall back to USD for unknown destination currencies",
+  "expected_mechanism": "Unknown target Convert behavior changes",
+  "original_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "changed_sha256": "4a271d7b39a6eafba2e9fc82de09754cc335a9020dae907809925de0e6f753ae",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\F02_unknown_currency_fallback\\compose.override.yml"
+}

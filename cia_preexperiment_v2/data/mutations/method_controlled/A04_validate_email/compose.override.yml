@@ -1,0 +1,4 @@
+services:
+  emailservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/A04_validate_email/email_server.py:/email_server/email_server.py:ro

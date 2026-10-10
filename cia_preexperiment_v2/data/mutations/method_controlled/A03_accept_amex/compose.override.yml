@@ -1,0 +1,4 @@
+services:
+  paymentservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/mutations/method_controlled/A03_accept_amex/charge.js:/usr/src/app/charge.js:ro

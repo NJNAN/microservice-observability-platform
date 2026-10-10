@@ -1,0 +1,15 @@
+{
+  "case_id": "R01_catalog_refresh_d2c729",
+  "cohort": "real_commit_replay",
+  "change_type": "Real catalog commit",
+  "changed_service": "productcatalogservice",
+  "changed_file": "src/productcatalogservice/products.json",
+  "commit": "d2c729d10700b4758dbd09062170ec02cc46b974",
+  "parent": "f362d2b2a1ba24d16e479dad9fd7098fa05b35eb",
+  "replay_scope": "exact products.json blobs; other historical commit files are not replayed",
+  "description": "Replace vintage catalog with Cymbal product list",
+  "original_sha256": "6397274e3a8eaacd8fe466507ed34040f4e1b434cb42f0295e88890d6051ca31",
+  "changed_sha256": "766cd816fb1721ec0ce8d9261214fb5e10f6b89ce70600e2d20f149c7b5afffa",
+  "override_original": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R01_catalog_refresh_d2c729\\original.override.yml",
+  "override_changed": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\commits\\method_replays\\R01_catalog_refresh_d2c729\\changed.override.yml"
+}

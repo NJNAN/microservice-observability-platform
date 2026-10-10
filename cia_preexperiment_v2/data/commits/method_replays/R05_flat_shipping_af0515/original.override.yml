@@ -1,0 +1,3 @@
+services:
+  shippingservice:
+    image: cia-online-boutique-shippingservice:real-af051-original

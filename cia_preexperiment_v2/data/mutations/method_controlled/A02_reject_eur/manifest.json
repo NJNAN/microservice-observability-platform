@@ -1,0 +1,12 @@
+{
+  "case_id": "A02_reject_eur",
+  "cohort": "controlled",
+  "change_type": "API",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "description": "Reject EUR as conversion target",
+  "expected_mechanism": "Convert EUR status changes",
+  "original_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "changed_sha256": "8fe3d4482ca002629d22c6fcdbb38381fef02595674dc3003aada943b817ae4d",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\A02_reject_eur\\compose.override.yml"
+}

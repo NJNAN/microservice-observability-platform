@@ -1,0 +1,15 @@
+flowchart LR
+  checkoutservice -->|2 calls| cartservice
+  checkoutservice -->|2 calls| currencyservice
+  checkoutservice -->|1 calls| emailservice
+  checkoutservice -->|1 calls| paymentservice
+  checkoutservice -->|1 calls| productcatalogservice
+  checkoutservice -->|2 calls| shippingservice
+  frontend -->|2 calls| adservice
+  frontend -->|5 calls| cartservice
+  frontend -->|1 calls| checkoutservice
+  frontend -->|19 calls| currencyservice
+  frontend -->|25 calls| productcatalogservice
+  frontend -->|4 calls| recommendationservice
+  frontend -->|2 calls| shippingservice
+  recommendationservice -->|4 calls| productcatalogservice

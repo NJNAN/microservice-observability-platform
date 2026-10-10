@@ -1,0 +1,121 @@
+name: mop-dev
+services:
+  currencyservice:
+    image: mop-currencyservice:v1
+    environment:
+      PORT: '7000'
+      DISABLE_PROFILER: '1'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: currencyservice
+      COLLECTOR_SERVICE_ADDR: http://otel-collector:4317
+  productcatalogservice:
+    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice:v0.10.4
+    environment:
+      PORT: '3550'
+      DISABLE_PROFILER: '1'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: productcatalogservice
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+  checkoutservice:
+    image: mop-checkoutservice:v1
+    environment:
+      PORT: '5050'
+      PRODUCT_CATALOG_SERVICE_ADDR: productcatalogservice:3550
+      SHIPPING_SERVICE_ADDR: shippingservice:50051
+      PAYMENT_SERVICE_ADDR: paymentservice:50051
+      EMAIL_SERVICE_ADDR: emailservice:5000
+      CURRENCY_SERVICE_ADDR: currencyservice:7000
+      CART_SERVICE_ADDR: cartservice:7070
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: checkoutservice
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+  shippingservice:
+    image: mop-shippingservice:v1
+    environment:
+      PORT: '50051'
+      DISABLE_PROFILER: '1'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: shippingservice
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+  cartservice:
+    image: mop-cartservice:v1
+    environment:
+      REDIS_ADDR: redis-cart:6379
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: cartservice
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+      OTEL_DOTNET_EXPERIMENTAL_ASPNETCORE_ENABLE_GRPC_INSTRUMENTATION: 'true'
+  redis-cart:
+    image: redis:7.2-alpine
+    environment: {}
+  emailservice:
+    image: mop-emailservice:v1
+    environment:
+      PORT: '5000'
+      DISABLE_PROFILER: '1'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: emailservice
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+  paymentservice:
+    image: mop-paymentservice:v1
+    environment:
+      PORT: '50051'
+      DISABLE_PROFILER: '1'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: paymentservice
+      COLLECTOR_SERVICE_ADDR: http://otel-collector:4317
+  frontend:
+    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend:v0.10.4
+    environment:
+      PORT: '8080'
+      PRODUCT_CATALOG_SERVICE_ADDR: productcatalogservice:3550
+      CURRENCY_SERVICE_ADDR: currencyservice:7000
+      CART_SERVICE_ADDR: cartservice:7070
+      RECOMMENDATION_SERVICE_ADDR: recommendationservice:8080
+      SHIPPING_SERVICE_ADDR: shippingservice:50051
+      CHECKOUT_SERVICE_ADDR: checkoutservice:5050
+      AD_SERVICE_ADDR: adservice:9555
+      SHOPPING_ASSISTANT_SERVICE_ADDR: shoppingassistantservice:80
+      ENABLE_PROFILER: '0'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: frontend
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+    ports:
+    - 127.0.0.1:18081:8080
+  recommendationservice:
+    image: us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice:v0.10.4
+    environment:
+      PORT: '8080'
+      PRODUCT_CATALOG_SERVICE_ADDR: productcatalogservice:3550
+      DISABLE_PROFILER: '1'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: recommendationservice
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+  adservice:
+    image: mop-adservice:v1
+    environment:
+      PORT: '9555'
+      ENABLE_TRACING: '1'
+      OTEL_SERVICE_NAME: adservice
+      COLLECTOR_SERVICE_ADDR: otel-collector:4317
+      JAVA_TOOL_OPTIONS: --add-opens=java.base/java.lang=ALL-UNNAMED -javaagent:/otel/javaagent.jar
+      OTEL_TRACES_EXPORTER: otlp
+      OTEL_EXPORTER_OTLP_PROTOCOL: grpc
+      OTEL_EXPORTER_OTLP_ENDPOINT: http://otel-collector:4317
+      OTEL_TRACES_SAMPLER: always_on
+      OTEL_METRICS_EXPORTER: none
+      OTEL_LOGS_EXPORTER: none
+  jaeger:
+    image: jaegertracing/all-in-one:1.76.0
+    environment:
+      COLLECTOR_OTLP_ENABLED: 'true'
+    ports:
+    - 127.0.0.1:16687:16686
+  otel-collector:
+    image: otel/opentelemetry-collector-contrib:0.123.0
+    command:
+    - --config=/etc/otel/config.yaml
+    volumes:
+    - ./configs/otel/collector.yaml:/etc/otel/config.yaml:ro

@@ -1,0 +1,12 @@
+{
+  "case_id": "D01_local_cache",
+  "cohort": "controlled",
+  "change_type": "Dependency",
+  "changed_service": "recommendationservice",
+  "changed_file": "src/recommendationservice/recommendation_server.py",
+  "description": "Use a stale local catalog snapshot instead of catalog RPC",
+  "expected_mechanism": "Catalog call disappears and recommendation output changes",
+  "original_sha256": "4d777f010e019de588138239272e272f2ea54b8536aa0b34fb5faf76739d343c",
+  "changed_sha256": "d4624fb3a78205b63299d8c6034e4b52d46450b375c4e61ddb4fdd04e5990167",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\D01_local_cache\\compose.override.yml"
+}

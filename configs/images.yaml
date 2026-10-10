@@ -1,0 +1,11 @@
+adservice: mop-adservice:v1
+cartservice: mop-cartservice:v1
+checkoutservice: mop-checkoutservice:v1
+currencyservice: mop-currencyservice:v1
+emailservice: mop-emailservice:v1
+frontend: us-central1-docker.pkg.dev/google-samples/microservices-demo/frontend:v0.10.4
+paymentservice: mop-paymentservice:v1
+productcatalogservice: us-central1-docker.pkg.dev/google-samples/microservices-demo/productcatalogservice:v0.10.4
+recommendationservice: us-central1-docker.pkg.dev/google-samples/microservices-demo/recommendationservice:v0.10.4
+redis-cart: redis:7.2-alpine
+shippingservice: mop-shippingservice:v1

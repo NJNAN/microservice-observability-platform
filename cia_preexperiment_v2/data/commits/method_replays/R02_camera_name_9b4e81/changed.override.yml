@@ -1,0 +1,4 @@
+services:
+  productcatalogservice:
+    volumes:
+      - D:/TGD-Runtime/cia_preexperiment_v2/data/commits/method_replays/R02_camera_name_9b4e81/products_changed.json:/src/products.json:ro

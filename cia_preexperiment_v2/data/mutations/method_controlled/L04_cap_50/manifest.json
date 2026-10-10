@@ -1,0 +1,12 @@
+{
+  "case_id": "L04_cap_50",
+  "cohort": "controlled",
+  "change_type": "Logic",
+  "changed_service": "currencyservice",
+  "changed_file": "src/currencyservice/server.js",
+  "description": "Cap converted amounts at 50 units",
+  "expected_mechanism": "High-priced products change",
+  "original_sha256": "6db859d151f107b60b5896922c58331feaad98a1ad1a7eb61193e462ea711dc0",
+  "changed_sha256": "181f9b7066602fe0b91bcbe717a48e359a5422f64ca8c6389179682fbe14fe3d",
+  "override": "D:\\TGD-Runtime\\cia_preexperiment_v2\\data\\mutations\\method_controlled\\L04_cap_50\\compose.override.yml"
+}
